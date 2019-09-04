@@ -1,0 +1,41 @@
+@charset "utf-g";
+
+body{
+  margin:0;
+}
+
+.header, .visual, .main-content, .slogan, .footer{
+  margin: 0 auto;
+  width:940px;
+}
+
+.header{
+  /* box-sizing: content-box; */
+  box-sizing: border-box;
+  background-color: pink;
+  height: 10vh;
+}
+
+.visual{
+  background-color: lime;
+  height: 120px;
+}
+
+.main-content{
+  min-height: 400px;
+  background-color: skyblue;
+}
+
+.slogan{
+  background-color: orange;
+  padding: 15px 0;
+}
+
+.footer-bg{
+  background-color: silver;
+  padding:15px 0;
+}
+
+.footer{
+  background-color: yellow;
+}
