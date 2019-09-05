@@ -1,5 +1,10 @@
 @charset "utf-g";
 
+/* 초기화 */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
 body{
   margin:0;
 }
@@ -23,7 +28,32 @@ body{
 
 .main-content{
   min-height: 400px;
+  padding: 30px;
   background-color: skyblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.group{
+  background-color: yellow;
+}
+
+.group1{
+  flex-basis: 250px;
+  /* flex-grow: 2;
+  flex-shrink: 1; */
+  /* 위 세가지를 함축해서 flex: 50px 2 1; */
+  background-color:orange;
+}
+.group2{
+  flex-basis: 380px;
+  /* flex-grow: 1; */
+  background-color:green;
+}
+.group3{
+  flex-basis: 190px;
+  /* flex-grow: 2; */
 }
 
 .slogan{
