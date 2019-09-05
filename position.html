@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Position</title>
+  <style>
+  body{
+    margin: 50px;
+  }
+
+  .shadow{
+    background-color: #000;
+  }
+
+  .text{
+    background-color: #ff0;
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+  }
+
+  .box{
+    margin-top: 50px;
+    background-color: #f0f;
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px 10px #000;
+    /* x y 투명도 블러 색상 */
+  }
+
+  </style>
+</head>
+<body>
+  <div class="shadow">
+    <div class="text">Text Shadow Effect</div>
+  </div>
+
+  <div class="box">
+    Text Shadow Effect
+  </div>
+</body>
+</html>
