@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
 <!-- 접근성 측면에서 사용하는 태그 앞에는 언어 뒤에는 국가코드-->
+
 <head>
   <meta charset="UTF-8">
   <!-- 인코딩 선언, UTF-8은 다국어 지원, 표준에서 권장하고 있음, 반드시 title보다 먼저 있어야함 -->
@@ -8,8 +9,9 @@
   <!-- x가 붙어있는 것은 비표준임 user ajent / internet explorer의 약자인데 이것은 렌더링 옵션을 많이 가지고 있음 edge 최신버전을 의미함 -->
   <title>웹카페-HTML5,CSS,웹표준,웹접근성</title>
   <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css"> -->
-  <link rel="stylesheet" href="./css/webcafe.css">
+  <link rel="stylesheet" href="./css/webcafe1.css">
 </head>
+
 <body>
   <!-- 헤더 시작 -->
   <header class="header">
@@ -31,6 +33,122 @@
         <a href="#">english</a>
       </li>
     </ul>
+
+
+    <nav class="navigation">
+      <h2 class="a11y-hidden">메인메뉴</h2>
+
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#" class="btn-menu" role="button">HTML에 대해</a>
+          <ul class="sub-menu sub-menu1">
+            <li class="icon-dot-circled">
+              <a href="#">HTML5 소개</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">래퍼런스 소개</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">활용예제</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="btn-menu" role="button">CSS에 대해</a>
+          <ul class="sub-menu sub-menu2">
+            <li class="icon-dot-circled">
+              <a href="#">CSS 소개</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">CSS2 VS CSS3 소개</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">CSS 애니메이션</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">CSS Framework</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="btn-menu" role="button">웹표준</a>
+          <ul class="sub-menu sub-menu3">
+            <li class="icon-dot-circled">
+              <a href="#">웹표준 이란?</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">W3C</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">HTML5의 현재와 미래</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="btn-menu" role="button">웹 접근성</a>
+          <ul class="sub-menu sub-menu4">
+            <li class="icon-dot-circled">
+              <a href="#">웹 접근성의 개요</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">장애 환경의 이해</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">장차법</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">웹 접근성 품질마크</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="btn-menu" role="button">묻고 답하기</a>
+          <ul class="sub-menu sub-menu5">
+            <li class="icon-dot-circled">
+              <a href="#">묻고 답하기</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">FAQ</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">1:1 질문</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">웹 표준</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">웹 접근성</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="btn-menu" role="button">자료실</a>
+          <ul class="sub-menu sub-menu6">
+            <li class="icon-dot-circled">
+              <a href="#">공개 자료실</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">이미지 자료실</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">웹표준 자료실</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">웹 접근성 자료실</a>
+            </li>
+            <li class="icon-dot-circled">
+              <a href="#">웹 접근성</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
   </header>
   <!-- 헤더 종료 -->
 
@@ -46,4 +164,5 @@
   </div>
 
 </body>
-  </html>
+
+</html>

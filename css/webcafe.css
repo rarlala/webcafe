@@ -1,6 +1,7 @@
 @charset "utf-g";
 @import url('https://necolas.github.io/normalize.css/latest/normalize.css');
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('./fontello.css');
 
 /* 초기화 */
 *, *::before, *::after{
@@ -22,6 +23,20 @@ a:visited{
 /* a:hover, a:focus{
   color: red;
 } */
+
+/* 숨김 콘텐츠 */
+
+.a11y-hidden{
+  /* background-color: red; */
+  position: absolute;
+  /* top: -9999em; 스크롤되는 문제가 발생함*/
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
 
 html{
   font-size: 10px;
@@ -45,7 +60,7 @@ body{
   box-sizing: border-box;
   background-color: pink;
   position: relative;
-  padding: 10px 30px 50px 30px;
+  padding: 0 30px 50px 30px;
 }
 
 /* LOGO */
@@ -59,11 +74,13 @@ body{
 /* 멤버 링크 */
 .member{
   list-style-type: none;
-  padding-left: 0;
+  padding: 2px 0;
   margin: 0;
-  background-color: yellow;
+  /* background-color: yellow; */
   font-size: 0;
   text-align: right;
+  position: relative;
+  right: -10px;
   /* flex 방법
   display: flex;
   flex-direction: row;
@@ -74,7 +91,6 @@ body{
 
 .member li{
   display: inline-block;
-  background-color: aqua;
   font-size: 1.4rem;
   text-transform :uppercase;
 }
@@ -84,6 +100,32 @@ body{
   background-color: lime;
   height: 120px;
 }
+
+/* .member li::before{
+  background-color: orange;
+  font-family: "fontello";
+  content: "\f142";
+} */
+
+.member li:nth-child(n+2)::before{
+  background-color: orange;
+  font-family: "fontello";
+  content: "\f142";
+  /* fontello 방식
+  width: 1em;
+  display: inline-block;
+  margin:0 .2em;
+  text-align: center; */
+}
+
+.member a{
+  padding:8px 10px;
+  display: inline-block;
+}
+
+/* 메인메뉴 */
+
+
 
 .main-content{
   min-height: 400px;
