@@ -10,15 +10,16 @@
 
 a{
   text-decoration: none;
-}
-
-a:link{
   color: inherit;
 }
 
-a:visited{
+/* a:link{
+  color: inherit;
+} */
+
+/* a:visited{
   color: #999;
-}
+} */
 
 /* a:hover, a:focus{
   color: red;
@@ -67,7 +68,7 @@ body{
 .logo{
   margin : 0;
   position: absolute;
-  top: 50px;
+  top: 45px;
   left: 70px;
 }
 
@@ -95,12 +96,6 @@ body{
   text-transform :uppercase;
 }
 
-
-.visual{
-  background-color: lime;
-  height: 120px;
-}
-
 /* .member li::before{
   background-color: orange;
   font-family: "fontello";
@@ -124,8 +119,55 @@ body{
 }
 
 /* 메인메뉴 */
+.menu{
+  background-color: #f7852e; /*배경 이미지가 해석되지 않는 환경에서 보여줄 색상 지정, 이런 것이 fallback 예외상황 처리*/
+  background-image: linear-gradient(to bottom, #ffc132 0%,#f7852e 35%,#f7852e 70%,#ffc132 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  padding-left: 225px;
+  list-style:none;
+  margin: 5px 0 0 0;
+  border-radius: 0 0 5px 5px;
+  /* border-top: 2px solid #000; */
+  box-shadow: 0 -2px 2px 0 #000;
+  /* 1/ height: 45px; */
+  /* 2/ 자동으로 float된 값의 높이만큼 되도록 지정*/
+  /* overflow: auto; */
+}
 
+.menu::after{
+  content: "";
+  background-color: lime;
+  clear:both;
+  /* 여기까지만 쓰면 display의 속성이 inline이라 적용이 안됨 */
+  display: block;
+}
 
+.menu-item{
+  float:left;
+  line-height: 45px; 
+  /* line-height가 아닌 padding을 사용해 적용할 수도 있음 */
+}
+
+.btn-menu{
+  font-weight: 700;
+  font-size: 1.6rem;
+  color:#fff;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+ 
+}
+
+.sub-menu{
+  padding-left: 0;
+  list-style:none;
+  margin: 0;
+  background-color: yellow;
+  position: absolute;
+  display: none;
+}
+
+.visual{
+  background-color: lime;
+  height: 120px;
+}
 
 .main-content{
   min-height: 400px;
