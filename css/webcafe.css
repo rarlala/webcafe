@@ -70,6 +70,7 @@ body{
   position: absolute;
   top: 45px;
   left: 70px;
+  /* z-index: 10; */
 }
 
 /* 멤버 링크 */
@@ -141,17 +142,40 @@ body{
   display: block;
 }
 
+/* .menu > li{
+  float: left;
+} */
+
 .menu-item{
   float:left;
-  line-height: 45px; 
+  position: relative;
+  /* padding: 10px 0; .btm-menu가 padding top이 안먹어서 적용함*/
   /* line-height가 아닌 padding을 사용해 적용할 수도 있음 */
 }
 
 .btn-menu{
+  /* background-color: yellow; */
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  border-left: 2px solid rgba(255,255,255,0.5);
+  padding : 0 20px;
   font-weight: 700;
   font-size: 1.6rem;
   color:#fff;
   text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+}
+
+.menu-act .btn-menu{
+  color:#ff0 !important;
+  /* border-bottom: 2px solid #000; */
+}
+
+.menu-act .btn-menu::after{
+  content:"";
+  /* background-color: blue; */
+  display: block;
+  border-top: 2px solid #000;
 }
 
 .sub-menu{
@@ -161,11 +185,106 @@ body{
   background-color: yellow;
   position: absolute;
   display: none;
+  /* width: 500px; 해당과 아래는 서브메뉴가 밑으로 가로 배치가 안되기 때문에 사용해 본 코드임*/
+  white-space: nowrap;
+}
+
+.sub-menu li, .sub-menu a{
+  display: inline-block;
+}
+
+.sub-menu a{
+  /* 위에 display: inline-block을 추가한 이유는 inline일 때 padding이 적용되지 않기 때문 */
+  padding: 10px 0;
+  margin-right: 10px;
+}
+
+.menu-act .sub-menu{
+  /* 하나의 서브메뉴만 볼 수 있도록 설정하기 위함 */
+  display: block;
+  top: 47px;
+}
+
+.sub-menu1,.sub-menu2,.sub-menu3{
+  left:0;
+}
+
+.sub-menu4, .sub-menu5,.sub-menu6{
+  right: 0;
+}
+
+/* 비주얼 */
+@keyframes textAni{
+  0%{
+    font-size: 12px;
+    color:rgba(0,0,0,0);
+    /* padding:0; */
+    /* margin: 0; */
+    /* top:0;
+    left:0; */
+    transform: translate(0,0);
+  }
+  100%{
+    font-size: 24px;
+    color:rgba(0,0,0,1);
+    /* padding: 75px 0 0 400px; */
+    /* margin: 75px 0 0 400px; */
+    /* top:75px;
+    left: 400px; */
+    transform: translate(400px, 75px);
+  }
+}
+
+@keyframes bgAni{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 .visual{
   background-color: lime;
   height: 120px;
+  position: relative;
+}
+
+.visual::before, .visual::after{
+  content:"";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* animation-name: bgAni;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused; */
+  animation: bgAni 2000ms infinite alternate ease-in-out;
+}
+
+.visual::before{
+  /* background-color: silver;
+  background-image: url('./images/ani_flower_01.png'), url('./images/ani_flower_02.png');
+  background-repeat: no-repeat, no-repeat; /* background-repeat: no-repeat; 과 동일 
+  background-position: 0 -10px, 670px 0; */
+  background: url('./images/ani_flower_01.png') no-repeat 0 -10px, url('./images/ani_flower_02.png') no-repeat 670px 0;
+}
+
+.visual::after{
+  animation-delay: 1000ms;
+  background: url('./images/ani_flower_03.png') no-repeat 300px 0, url('./images/ani_flower_04.png') no-repeat 800px 15px;
+}
+
+
+.visual-text{
+  position: absolute;
+  background-color: yellow;
+  animation-name: textAni;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .main-content{
