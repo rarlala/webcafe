@@ -41,11 +41,10 @@ body{
 }
 
 .header{
-  background-color: red;
+  background-color: pink;
   position: relative;
   box-sizing: border-box;
   position: relative;
-  /* height: 100px; 임의 */
   padding: 0 30px 50px 30px;
 }
 
@@ -60,40 +59,25 @@ body{
 /* 멤버 링크 */
 .member{
   list-style-type: none;
-  /* 4. 여백 맞추기 */
   padding: 2px 0;
   margin: 0;
   font-size: 0;
-  /* background-color: purple; */
   text-align: right;
-  /* 4. 시안과 동일하도록 여백 맞추기 */
   position: relative;
   right: -10px;
 }
 
 .member li{
-  /* width:80px; */
   display:inline-block;
   font-size :1.4rem;
-  /* background-color:white; */
   text-transform :uppercase;
 }
 
-/* 1. fontello를 사용하여 넣어보는 과정 */
-/* .member li::before{
-  background-color: orange;
-  font-family: "fontello";
-  content: "\f142";
-} */
-
-/* 2. fontello 적용 시 속성 선택자를 사용 */
 .member li:nth-child(n+2)::before{
-  /* background-color: orange; */
   font-family: "fontello";
   content: "\f142";
 }
 
-/* 3. fontello 속성과 별도로 여백 주기 */
 .member a{
   padding: 8px 10px;
   display: inline-block;
@@ -103,21 +87,14 @@ body{
 
 .menu{
   background-color:orange;
-  /* menu 5. background 적용 */
   background-image: linear-gradient(to bottom, #ffc132 0%,#f7852e 35%,#f7852e 70%,#ffc132 100%);
-  /* menu 2. 메뉴 위치 padding으로 변동 및 list agent 속성 지우기 */
   padding-left: 225px;
   list-style: none;
   margin: 5px 0 0 0;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 -2px 2px 0 #000;
-  /* menu 3. margin 값을 적용하여 메뉴 위치 조정 */
-  /* menu 6. background 높이값 적용 */
-  /* 첫번째 방법 height: 45px; */
-  /* 두번째 방법 overflow: auto; */
 }
 
-/* menu 6. background 높이값 적용 세번째 방법 */
 .menu::after{
   content: "";
   background-color: lime;
@@ -127,28 +104,77 @@ body{
 
 .menu-item{
   float: left;
-  line-height: 45px;
-  /* menu 4. padding이 아닌 line-height 속성을 사용하면 가운데 위치한 듯한 css trick이 됨 */
+  /* .sub-menu의 영역의 위치를 잡아주기 위해 지정함 */
+  position: relative;
+  /* 메뉴의 경계선을 그려준다. */
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .btn-menu{
-  /* menu 4. menu의 font style 변경 */
+  /* height 속성을 지정해 준 의미는 박스 아래 줄을 그어줄 때 넘어가는 현상 방지 */
+  height: 45px;
+  line-height: 45px;
   font-weight: 700;
   font-size: 1.6rem;
   color:#fff;
   text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+  /* menu의 영역을 넓히기 위해 padding을 적용한다.*/
+  /* 해당 영역에 적용한 이유는 li 위치가 아닌 a 영역을 넓힘으로 사용자가 해당 메뉴를 클릭할때의 편의성을 높여주기 위함이다. */
+  padding:0 20px;
+  display: block;
+  /* background:pink; */
+}
+
+.menu-act .btn-menu{
+  /* 해당 코드는 li에 hover 된 경우 color값을 변경하는 것 */
+  color:#ff0 !important;
+}
+
+.menu-act .btn-menu::after{
+  content:"";
+  display: block;
+  border-top: 2px solid #000;
 }
 
 .sub-menu{
-  /* menu 2. sub 메뉴 list agent 속성 지우기 */
   padding-left: 0;
   list-style: none;
-  /* margin:0; */
-  background-color: pink;
-  /* menu 3. sub 메뉴로 인해 menu 영역 margin이 일정하지 않기 때문에 position:absolute 값을 부여함. 적용 후 안보이도록 처리*/
+  margin: 0;
+  /* background-color: pink; */
   position: absolute;
+  /* width: 500px; */
   display: none;
+  /* width영역이 넘어가면 줄바꿈이 일어나지 않는다. */
+  white-space: nowrap;
 }
+
+.menu-act .sub-menu{
+  display: block;
+  top: 47px;
+}
+
+.sub-menu li, .sub-menu a{
+  /* 가로로 나열하기 위해서 li영역의 display 속성을 변경시킴 */
+  /* a에 적용한 이유는 inl */
+  display: inline-block;
+}
+
+/* 서브메뉴를 가로로 정렬 */
+
+.sub-menu a{
+/* 서브메뉴의 영역을 확장시키기 위한 용도 */
+  padding: 10px 0;
+  margin-right: 10px;
+}
+
+.sub-menu1, .sub-menu2, .sub-menu3{
+  left:0;
+}
+
+.sub-menu4, .sub-menu5, .sub-menu6{
+  right:0;
+}
+
 
 .main-content{
   background-color: orange;
