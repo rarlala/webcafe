@@ -315,7 +315,95 @@ body{
 }
 
 /* 로그인 */
+
 .login{
+  background: #f7852e radial-gradient(circle at right top, #ffc132, #f7852e);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 0 0 #666;
+}
+
+.login-heading{
+  margin:0;
+  /* padding-left: 10px; */
+  text-indent: 10px; 
+  /* background-color: pink; */
+  font-size: 1.5rem;
+  color: #ff0;
+}
+
+.login-form{
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  margin-top: 10px;
+  padding: 10px 10px 0 10px;
+  /* 제목에 margin-bottom을 줘도 되지만, 아래 섹션이 많이 등장할 수 있기 때문에 통상적으로 해당과 같이 적용 */
+}
+
+.login fieldset{
+  border: 0;
+  position: relative;
+  /* background-color: yellow; */
+  padding:0 0 10px 0;
+  border-bottom: 1px solid #aaa;
+}
+
+.login-form label{
+  /* background-color: pink; */
+  width: 4em;  /* 4글자만큼 */
+  display: inline-block;
+}
+
+/* .login-form [type="email"], .login-form [type="password"] */
+.login-form input{
+  /* background-color: skyblue; */
+  width:90px;
+  height: 22px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+}
+
+.user-pw{
+  margin-top: 6px;
+}
+
+.btn-login{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ed8625;
+  background: #f7cc31;
+  padding: 0;
+  color: #fff;
+  border-radius: 3px;
+  /* IE버전 때문에 넣어놓는 코드 */
+  font: inherit;
+}
+
+
+.sign{
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  margin:0;
+  padding-left: 0;
+  list-style: none;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign li{
+  /* background-color: yellow; */
+  font-size: 1.3rem;
+}
+
+.sign li::before{
+  color: #ed8625;
+}
+
+/* .login{
   background: #f7852e radial-gradient(circle at right top, #ffc132, #f7852e);
   border-radius: 10px;
   box-shadow: 4px 4px 0 0 gray;
@@ -391,7 +479,7 @@ form::after{
   padding: 0;
   font-size: 12px;
 
-}
+} */
 
 .slogan{
   background-color: orange;
