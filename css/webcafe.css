@@ -427,39 +427,92 @@ body{
   padding: 8px 0 10px 45px;
 }
 
-/* .validation-list{
-  list-style: none;
-  padding: 0;
-  margin: 20px 0 20px 0;
-}
+/* 웹 관련 영역 */
 
-.validation-list li{
-  display: inline-block;
-  border-radius: 20px;
-  width: 100%;
-  background: #f0f0f0;
+.term{
+  background:#ccc linear-gradient(#ccc, #eee); 
   border: 1px solid #aaa;
-  padding: 5px 20px;
-  background-color: yellow;
+  border-radius: 5px;
+  padding: 10px 15px;
 }
 
-.validation-list li:nth-child(1){
-  margin-bottom:10px;
+.term-heading{
+  /* background: yellow; */
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-.validation-list li a{
-  font-weight: 600;
-  width: inherit;
+.term-list{
+  /* background: yellow; */
+  margin: 10px 0 0 0;
 }
 
-.validation-list li a::before{
-  content:url('./images/validation_icon.png');
-  width: 20px;
-  height: 20px;
-  padding-top: 3px;
-  /* background-color: blue; */
-  /* margin-right: 5px; */
+/* .term-list .even{
+  display: inline-block;
+  margin-top: 10px;
+  padding-top: 10px;
 } */
+
+/* .term-list::after{
+  content: "";
+  clear:both;
+  display: block;
+} */
+
+.term-list-subject{
+  margin: -2px 0 5px 0;
+}
+
+.term-list-subject,.term-list-brief{
+  /* background-color: pink; */
+  float: right;
+  width: 145px;
+}
+
+.term-list-thumbnail{
+  /* background-color: lime; */
+  float: left;
+}
+
+.term-list-thumbnail img{
+  vertical-align: top;
+  /* inline이 배치되는 라인을 결정해주는 것 */
+}
+
+.term-list-brief{
+  /* background-color: orange; */
+  line-height: 1.5;
+}
+
+.term-list-thumbnail, .term-list-brief{
+  margin: 0;
+}
+
+.odd, .even{
+  margin-top: 15px;
+}
+
+.odd::after, .even::after{
+  content: "";
+  clear:both;
+  display: block;
+}
+
+.odd .term-list-subject, .odd .term-list-brief{
+  float: left;
+}
+
+.odd .term-list-thumbnail{
+  float: right;
+}
+
+.even .term-list-subject, .even .term-list-brief{
+  float: right;
+}
+
+.even .term-list-thumbnail{
+  float: left;
+}
 
 .slogan{
   background-color: orange;
