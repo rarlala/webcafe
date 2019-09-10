@@ -406,6 +406,28 @@ body{
 /* 목록 영역 */
 
 .validation-list{
+  /* background-color: yellow; */
+  list-style-type: none;
+  padding-left: 0;
+  margin: 25px 0 20px;
+  /* box shadow를 줬기 때문에 5px을 더 줘야한다.*/
+}
+
+.validation-list li{
+  margin: 10px 0;
+}
+
+.validation-list a{
+  /* background icon은 앞에 위치해야 하기 때문에 앞에 배치해서 불러야한다. */
+  background: url('./images/validation_icon.png') no-repeat 20px 50%, linear-gradient(#ccc, #eee); /* 기본값 repeat position 0 0 */
+  /* 어느 영역을 눌러도 링크가 되도록 display 속성 변경 */
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 30px;
+  padding: 8px 0 10px 45px;
+}
+
+/* .validation-list{
   list-style: none;
   padding: 0;
   margin: 20px 0 20px 0;
@@ -418,7 +440,7 @@ body{
   background: #f0f0f0;
   border: 1px solid #aaa;
   padding: 5px 20px;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 
 .validation-list li:nth-child(1){
@@ -437,7 +459,7 @@ body{
   padding-top: 3px;
   /* background-color: blue; */
   /* margin-right: 5px; */
-}
+} */
 
 .slogan{
   background-color: orange;
