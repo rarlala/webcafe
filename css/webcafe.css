@@ -403,83 +403,41 @@ body{
   color: #ed8625;
 }
 
-/* .login{
-  background: #f7852e radial-gradient(circle at right top, #ffc132, #f7852e);
-  border-radius: 10px;
-  box-shadow: 4px 4px 0 0 gray;
-  padding:10px;
-}
+/* 목록 영역 */
 
-.login-heading{
-  font-size: 15px;
-  font-weight: 700;
-  color: yellow;
-  margin: 0 0 10px 10px;
-}
-
-form{
-  position: relative;
-  background-color: #FFf;
-  border-radius: 5px 5px 0 0;
-  border: none;
-}
-
-fieldset{
-  border:none;
-  padding: 10px;
-}
-
-.sign{
-  background-color: #FFf;
-  border-radius: 0 0 5px 5px;
-  border: none;
-}
-
-label[for="user-email"]{
-  margin-right: 12px;
-}
-
-.user-email{
-  margin-bottom: 5px;
-}
-
-input{
-  width:100px;
-  padding-left: 2px;
-}
-
-.btn-login{
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size:12px;
-  border-radius: 2px;
-  background: red;
-  border: 1px solid #f7852e;
-  color: #fff;
-}
-
-form::after{
-  content:"";
-  display: block;
-  border-bottom: 1px solid gray;
-  margin: 0 10px;
-}
-
-.sign{
-  list-style-type: none;
-  padding:10px;
-  margin:0;
-}
-
-.icon-angle-right{
-  display: inline-block;
+.validation-list{
+  list-style: none;
   padding: 0;
-  font-size: 12px;
+  margin: 20px 0 20px 0;
+}
 
-} */
+.validation-list li{
+  display: inline-block;
+  border-radius: 20px;
+  width: 100%;
+  background: #f0f0f0;
+  border: 1px solid #aaa;
+  padding: 5px 20px;
+  /* background-color: yellow; */
+}
+
+.validation-list li:nth-child(1){
+  margin-bottom:10px;
+}
+
+.validation-list li a{
+  font-weight: 600;
+  width: inherit;
+}
+
+.validation-list li a::before{
+  content:url('./images/validation_icon.png');
+  width: 20px;
+  height: 20px;
+  padding-top: 3px;
+  /* background-color: blue; */
+  /* margin-right: 5px; */
+}
 
 .slogan{
   background-color: orange;
