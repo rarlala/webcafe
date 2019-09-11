@@ -244,6 +244,105 @@ body{
   width: 250px;
 }
 
+/* group1 */
+
+/* group1 로그인 영역 */
+
+.login{
+  padding: 10px;
+  background: #f7852e linear-gradient(#f7852e, #ffc132);
+  border-radius: 10px;
+  box-shadow: 5px 5px gray;
+}
+
+.login-heading{
+  margin: 0;
+  color: yellow;
+  font-size: 1.5rem;
+  padding: 0 0 10px 10px;
+}
+
+.login-section{
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+}
+
+.login fieldset{
+  border:none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.login legend{
+  display: none;
+}
+
+.login-section label{
+  display: inline-block;
+  width: 4em;
+  /* background-color: green; */
+}
+
+.login-section input{
+  width: 95px;
+}
+
+.user-pw{
+  margin-top: 5px;
+}
+
+.login-btn {
+  background-color: #f7852e;
+  padding: 0;
+  border:0;
+  border: 1px solid yellow;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top:0;
+  right: 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.login-section::after{
+  content: "";
+  display: block;
+  margin-top: 10px;
+  border-bottom: 1px solid #000;
+  background: #000
+}
+
+.login-service{
+  list-style: none;
+  background-color: #fff;
+  margin:0;
+  border-radius: 0 0 10px 10px;
+  padding: 0 10px 10px 10px;
+  /* float: left; */
+}
+
+.login-service li{
+  display: inline-block;
+  font-size: 1.3rem;
+}
+
+.login-service li::before{
+  font-family: "fontello";
+  content: "\e804";
+  margin-right: 5px;
+  color: #f7852e;
+}
+
+.login-service li:nth-child(1){
+  /* background-color: pink; */
+  margin-right: 15px;
+}
+
+/*  */
+
 .main-content .group2{
   background-color: white;  
   width: 380px;
