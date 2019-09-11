@@ -14,12 +14,14 @@ a{
 }
 
 /* menu 1. 숨김 */
-.a11y-hidden{
+.a11y-hidden, legend{
   position: absolute;
-  width:1px;
+  width: 1px;
   height: 1px;
   margin: -1px;
   overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
 }
 
 /* html 시작 */
@@ -177,7 +179,7 @@ body{
 
 
 .main-content{
-  background-color: orange;
+  background-color: white;
   min-height: 400px;
   padding: 30px;
   display: flex;
@@ -240,7 +242,7 @@ body{
 }
 
 .main-content .group1{
-  background-color: pink;
+  /* background-color: pink; */
   width: 250px;
 }
 
@@ -252,7 +254,7 @@ body{
   padding: 10px;
   background: #f7852e linear-gradient(#f7852e, #ffc132);
   border-radius: 10px;
-  box-shadow: 5px 5px gray;
+  box-shadow: 5px 5px #666;
 }
 
 .login-heading{
@@ -269,14 +271,10 @@ body{
 }
 
 .login fieldset{
-  border:none;
+  border: 0;
   padding: 0;
   margin: 0;
   position: relative;
-}
-
-.login legend{
-  display: none;
 }
 
 .login-section label{
@@ -287,6 +285,9 @@ body{
 
 .login-section input{
   width: 95px;
+  height: 22px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 3px;
 }
 
 .user-pw{
@@ -296,7 +297,6 @@ body{
 .login-btn {
   background-color: #f7852e;
   padding: 0;
-  border:0;
   border: 1px solid yellow;
   width: 50px;
   height: 50px;
@@ -341,10 +341,82 @@ body{
   margin-right: 15px;
 }
 
-/*  */
+/* 링크영역 */
+
+.link-area{
+  margin-top:25px;
+}
+
+.link-area h2{
+  margin: 0;
+}
+
+.link-area ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.link-area ul li a{
+  display: block; 
+  background-color: green;
+  border-radius: 100px;
+  padding: 7px 0 7px 40px;
+  background: url('./images/validation_icon.png') no-repeat 12px, #ccc linear-gradient(#ccc, #eee);
+  border: 1px solid #aaa;
+}
+
+.link-area ul li:nth-child(n+1){
+  margin-top: 10px;
+}
+
+/* 웹 관련 용어 영역 */
+
+.term{
+  /* background: purple; */
+  padding: 10px;
+  background: #ccc linear-gradient(#ccc, #eee);
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.term h2{
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.term dl, .term dt, .term dd{
+  margin: 0;
+  padding: 0;
+}
+
+.term dl{
+  /* clear: both; */
+  overflow: hidden;
+}
+
+.term-title{
+  float: right;
+  /* background-color: pink; */
+  width: 150px;
+  color: blue;
+}
+
+.term-image{
+  /* background-color: orange; */
+  float: left;
+  /* vertical-align: top; */
+}
+
+.term .term-desc{
+  /* background-color: yellow; */
+  float: right;
+  width: 150px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
 
 .main-content .group2{
-  background-color: white;  
+  background-color: pink;  
   width: 380px;
 }
 
