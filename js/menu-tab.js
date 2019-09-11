@@ -16,7 +16,7 @@ list.find('a').attr('class', 'icon-dot-circled');
 // 탭 클릭 시 tab-act 클래스를 부모 요소에 추가하기
 tab.on('click keyup', function(e){
   e.preventDefault();
-  if(e.keyCode === 13 || e.type === 'click'){
+  if((e.type === 'keyup' && e.keyCode === 13) || e.type === 'click'){
     section.removeClass('tab-act');
     $(this).parent().addClass('tab-act');
   }

@@ -514,6 +514,132 @@ body{
   float: left;
 }
 
+/* group2*/
+/* 검색영역 */
+
+.search{
+  background: #ccc linear-gradient(#ccc, #eee);
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+  border: 1px solid #aaa;
+  border-bottom: 0;
+}
+
+.search-form fieldset{
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+input[type="search"]{
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  width: 200px;
+  border-radius: 3px;
+  height: 24px;
+  margin: 0 2px;
+}
+
+.btn-search{
+  background: #121212;
+  color: #fff;
+  /* font: inherit; */
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding:0 10px;
+  height: 24px;
+  font-size: 1.3rem;
+}
+
+/* 공지사항과 자료실 영역 */
+
+.board{
+  background-color: yellow;
+  position: relative;
+  /* margin-top: 20px; */
+}
+
+.board ul, .board .more{
+  /* position: absolute; */
+  display:none;
+}
+
+.tab-act ul, .tab-act .more{
+  display: block !important;
+}
+
+.board .more{
+  background-color: skyblue;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.more::before{
+  color: hsla(110, 70% , 20% , 1);
+}
+
+.notice-heading, .pds-heading{
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.4rem; /* 또는 1em */
+  background-color: skyblue;
+  position: absolute;
+  top: 0;
+}
+
+.notice-heading{
+  left: 0;
+}
+
+.pds-heading{
+  left: 73px;
+}
+
+.tab{
+  /* 비활성화된 tab 모양 */
+  display: block;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0 ;
+  background:#ccc linear-gradient(#ccc, #eee);
+  color: #666;
+}
+
+.tab-act .tab{
+  color: #ed8625;
+  border-color: #ed8625 #ed8625 #fff #ed8625;
+  background: #fff;
+}
+
+.board ul{
+  background-color: pink;
+  margin: 20px 0;
+  padding: 45px 0 0 0;
+  list-style: none;
+}
+
+.board li{
+  background-color: lime;
+  margin: 8px 0;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.board li a{
+  background-color: silver;
+  width: 270px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board time{
+  background-color: orange;
+  margin-left: auto; 
+  /* float: right; */
+}
+
 .slogan{
   background-color: orange;
   padding: 15px 0;
