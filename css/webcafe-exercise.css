@@ -35,6 +35,7 @@ body{
   margin:0;
   color:#181818;
   font-family: 'Spoqa Han Sans', 'Sans-serif';
+  background: #eee;
 }
 
 .header, .visual, .main-content, .slogan, .footer{
@@ -43,7 +44,8 @@ body{
 }
 
 .header{
-  background-color: pink;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
   position: relative;
   box-sizing: border-box;
   position: relative;
@@ -180,6 +182,7 @@ body{
 
 .main-content{
   background-color: white;
+  border-radius: 15px 15px 0 0;
   min-height: 400px;
   padding: 30px;
   display: flex;
@@ -196,7 +199,7 @@ body{
 }
 
 .visual{
-  background-color: yellow;
+  background-image: url('./images/bg_flower.png');
   height: 120px;
   position: relative;
 }
@@ -234,7 +237,7 @@ body{
 
 .visual-text{
   position: absolute;
-  background-color: yellow;
+  /* background-color: yellow; */
   animation-name: textAni;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -409,15 +412,140 @@ body{
 
 .term .term-desc{
   /* background-color: yellow; */
-  float: right;
+  float: right; 
   width: 150px;
   line-height: 1.5;
   margin-top: 5px;
 }
 
+/* group 2 */
+
 .main-content .group2{
-  background-color: pink;  
+  /* background-color: pink;   */
   width: 380px;
+}
+
+/* group2 검색바 */
+
+.search{
+  background: linear-gradient(#ccc, #eee);
+  border-radius: 15px 15px 0 0;
+  padding: 15px 30px 10px 30px;
+  border: 1px solid #aaa;
+  border-bottom: 0;
+}
+
+.search fieldset{
+  padding:0;
+  margin:0;
+  border:0;
+}
+
+.search-title, .search-content, .search-btn{
+  vertical-align: center;
+}
+
+.search-title::before{
+  font-family: "fontello";
+  content: "\e800";
+  margin-right: 5px;
+}
+
+.search-content{
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+.search-btn{
+  color:#fff;
+  font-size: 1.2rem;
+  background-color: black;
+  border: 1px solid gray;
+  padding: 0 10px;
+  line-height: 20px;
+  border-radius: 5px;
+}
+
+/* 공지사항 자료실 영역 */
+
+.board{
+  margin: 20px 0;
+  /* background-color: blue; */
+  position: relative;
+}
+
+.board h2{
+  margin:0;
+  position: absolute;
+  top:0;
+}
+
+.board h2 a{
+  font-size:1.4rem;
+  font-weight: 400;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0 ;
+  background: #ccc linear-gradient(#ccc, #eee);  
+}
+
+.tab-act h2 a{
+  color: #f7852e;
+  background: #fff;
+  border-color: #f7852e;
+  border-bottom: 0;
+}
+
+.board .pds-title{
+  left: 72px;
+}
+
+.board ul, .board .more{
+  display: none;
+}
+
+.tab-act ul, .tab-act .more{
+  display: block;
+}
+
+.board ul{
+  list-style-type: none;
+  padding: 40px 0 0 0;
+  margin:0;
+}
+
+.board ul li::before{
+  font-family:"fontello";
+  content:"\f192";
+  /* background-color: white; */
+  margin-right: 5px;
+}
+
+.board ul li{
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.8em;
+}
+
+.board ul li a{
+  /* background-color: purple; */
+  /* width: 100%; */
+  margin-right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.more{
+  position: absolute;
+  /* background-color: green; */
+  top: 0;
+  right: 0;
+}
+
+.more::before{
+  color:green;
 }
 
 .main-content .group3{
