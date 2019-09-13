@@ -373,8 +373,8 @@ body{
   right: 0;
   width: 50px;
   height: 50px;
-  border: 1px solid #ed8625;
-  background: #f7cc31;
+  border: 1px solid #ff0;
+  background: #ed8625;
   padding: 0;
   color: #fff;
   border-radius: 3px;
@@ -554,7 +554,7 @@ input[type="search"]{
 /* 공지사항과 자료실 영역 */
 
 .board{
-  background-color: yellow;
+  /* background-color: yellow; */
   position: relative;
   /* margin-top: 20px; */
 }
@@ -569,7 +569,7 @@ input[type="search"]{
 }
 
 .board .more{
-  background-color: skyblue;
+  /* background-color: skyblue; */
   position: absolute;
   top: 0;
   right: 0;
@@ -583,7 +583,7 @@ input[type="search"]{
   margin: 0;
   font-weight: 400;
   font-size: 1.4rem; /* 또는 1em */
-  background-color: skyblue;
+  /* background-color: skyblue; */
   position: absolute;
   top: 0;
 }
@@ -613,21 +613,21 @@ input[type="search"]{
 }
 
 .board ul{
-  background-color: pink;
+  /* background-color: pink; */
   margin: 20px 0;
   padding: 45px 0 0 0;
   list-style: none;
 }
 
 .board li{
-  background-color: lime;
+  /* background-color: lime; */
   margin: 8px 0;
   display: flex;
   /* justify-content: space-between; */
 }
 
 .board li a{
-  background-color: silver;
+  /* background-color: silver; */
   width: 270px;
   white-space: nowrap;
   overflow: hidden;
@@ -635,9 +635,80 @@ input[type="search"]{
 }
 
 .board time{
-  background-color: orange;
+  /* background-color: orange; */
   margin-left: auto; 
   /* float: right; */
+}
+
+/* 새소식 영역 */
+
+.news{
+  position: relative;
+}
+
+.news-heading{
+  margin: 0;
+  font-size: 1.5rem;
+  color:#f7852e;
+  margin-bottom: 20px;
+  width: 300px;
+  /* background: purple; */
+}
+
+.news-heading::after{
+  content: "";
+  display: block;
+  margin-top:15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.news-title{
+  margin: 0 0 5px 0;
+  width: 250px;
+  font-size:1.4rem;
+  float: right;
+  /* background-color: yellow; */
+}
+
+.news-title-date{
+  /* background-color: blue; */
+  width: 250px;
+  float:right;
+}
+
+.news-img{
+  margin: -20px 0 0 0 ;
+  width: 115px;
+  /* background-color: orange; */
+  float: left;
+}
+
+.news .news-img img{
+  margin: 0;
+  box-shadow: 1px 10px 10px 3px #aaa;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.news .news-img .news-img-desc{
+  /* background-color: pink; */
+  display: block;
+  text-align: center;
+  margin-top:20px;
+}
+
+.news-desc{
+  margin:10px 0 0 0 ;
+  line-height: 1.5;
+  float: right;
+  width: 250px;
+}
+
+.news-more{
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* background-color: red; */
 }
 
 .slogan{
