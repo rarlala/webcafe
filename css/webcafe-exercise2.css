@@ -1,0 +1,83 @@
+@charset "utf-8";
+@import url("./fontello.css");
+
+/* 초기화 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #181818;
+  background-color: green;
+}
+
+header,
+.visual,
+.main-content,
+.slogan,
+.footer {
+  width: 940px;
+  margin: 0 auto;
+  background-color: pink;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* header 영역 */
+
+.header {
+  padding: 0 30px 50px 30px;
+  position: relative;
+}
+
+.logo {
+  margin: 0;
+  position: absolute;
+  top: 45px;
+  left: 70px;
+}
+
+/* member 영역 */
+
+.member {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.member {
+  position: absolute;
+  right: -10px;
+}
+
+.member li {
+  display: inline-block;
+}
+
+.member li a {
+  display: inline-block;
+  padding: 10px;
+  /* background-color: yellow; */
+  text-transform: uppercase;
+}
+
+.member li:nth-child(n + 2)::before {
+  font-family: "fontello";
+  content: "\f142";
+}
+
+.menu {
+  display: none;
+}
