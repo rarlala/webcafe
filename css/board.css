@@ -1,0 +1,204 @@
+@charset "utf-g";
+@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('./fontello.css');
+
+/* 초기화 */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.a11y-hidden, legend{
+  /* background-color: red; */
+  position: absolute;
+  /* top: -9999em; 스크롤되는 문제가 발생함*/
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.4rem;
+  margin: 50px;
+  color: #181818;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-weight: 400;
+  background: #fff;
+}
+
+/* 탭 UI */
+
+/* .board{
+  background-color: yellow;
+  position: relative;
+  width: 500px;
+}
+
+.board .tab-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.board .tab-list li{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.board .tab-list li a{
+  background: #ccc linear-gradient(to right, #ccc, #eee);
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.board-list{
+  list-style-type: none;
+  padding: 0;
+  background-color: blue;
+}
+
+.board-list .icon-dot-circled::before{
+  background-color: pink;
+  display: block;
+  margin: auto 5px auto 0;
+}
+
+.tab-content ul li{
+  display: flex;
+  justify-content: space-between;
+  background-color: pink;
+  line-height: 1.5em;
+}
+
+.tab-content ul li time{
+  margin-left: auto;
+}
+
+.more{
+  background-color:green;
+  position: absolute;
+  top:0;
+  right: 0;
+}
+
+.tab-list li a[aria-selected="true"]{
+  border:1px solid orange;
+  color: orange;
+  background: #fff;
+}
+
+.tab-content a::before{
+  color: green;
+}
+
+.tab-content section{
+  display: none;
+}
+
+.tab-content .tab-content-act{
+  display: block;
+} */
+
+
+/* 강사님 실습 */
+
+.board{
+  /* background-color: yellow; */
+  position: relative;
+}
+
+.tab-list, .board-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  /* display: flex; */
+}
+
+.tab-list::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.tab-list li{
+  /* background-color: green; */
+  float: left;
+}
+
+[role="tab"]{
+  background: #ccc linear-gradient(#ccc, #eee);
+  display: block;
+  /* display block을 해주는 이유는 inline 속성일 경우 lineheight의 영향을 받기 때문임 */
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  color: #aaa;
+}
+
+[role="tab"][aria-selected="true"]{
+  background: #fff;
+  color: hsla(25, 70%, 60%, 1);
+  border-color: hsla(25, 70%, 60%, 1) hsla(25, 70%, 60%, 1) #fff hsla(25, 70%, 60%, 1);
+}
+
+.tab-content{
+  /* background-color: skyblue; */
+  /* clear: both; */
+}
+
+.notice, .pds{
+  display: none;
+}
+
+.tab-content-act{
+  display: block !important;
+  /* 동적인 콘텐츠이기 때문에 순서를 바꿀 경우를 대비함 */
+}
+
+.board-list{
+  margin-top: 20px;
+}
+
+.board-list li{
+  /* background: pink; */
+  display: flex;
+  margin: 5px;
+}
+
+.board-list time{
+  margin-left: auto;
+}
+
+.board-list a{
+  /* background: lime; */
+  width: 285px;
+  /* width를 준 이유는 whitespace 추가하려고 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.more{
+  position: absolute;
+  top: -5px;
+  right: 0;
+  padding: 5px;
+  /* 조금 더 넓은 영역 클릭되기 위함 */
+}
+
+.more::before{
+  color: rgb(37, 85, 28);
+}
