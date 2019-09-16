@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('./fontello.css');
+
+/* 해당 html과 css 처리하면 공지사항 내 탭을 모두 거치고 자료실 탭으로 가는게 아닌 공지사항 탭 이후에 바로 자료실 탭으로 이동해 탭이 많은 경우 유용함 */
+
+/* 초기화 */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.a11y-hidden, legend{
+  /* background-color: red; */
+  position: absolute;
+  /* top: -9999em; 스크롤되는 문제가 발생함*/
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.4rem;
+  margin: 50px;
+  color: #181818;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-weight: 400;
+  background: #fff;
+}
+
+/* 초기화 종료 */
+
+/* 1번 방법 : display: flex를 이용해 작업하기 */
+
+/* .board{
+  position: relative;
+}
+
+.tab-list, .board-list{
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.tab-list{
+  display: flex;
+}
+
+.icon-dot-circled::before{
+  margin: auto 5px auto 0;
+}
+
+.tab-list li a{
+  background: linear-gradient(#ccc, #eee);
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #aaa;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.tab-list li a[aria-selected="true"]{
+  border-color: orangered;
+  color: orangered;
+  background: #fff;
+  border-bottom: 0;
+}
+
+.board-list li{
+  display: flex;
+}
+
+.board-list li a{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.board-list time{
+  margin-left: auto;
+}
+
+.notice, .pds{
+  display: none;
+}
+
+.tab-content-act{
+  display: block !important;
+}
+
+.icon-plus::before{
+  color: green;
+}
+
+.more{
+  position: absolute;
+  top: 0;
+  right: -10px;
+  padding: 10px;
+} */
+
+/* 2번 방법 : float 활용하기 */
+
+.board{
+  position: relative;
+}
+
+.tab-list, .board-list{
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.tab-list::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.tab-list li{
+  float: left;
+  /* background: red; */
+}
+
+[role="tab"]{
+  background: linear-gradient(#ccc, #eee);
+  display: block;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #aaa;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+[role="tab"][aria-selected="true"]{
+  border-color: hsla(25, 70%, 60%, 1) hsla(25, 70%, 60%, 1) #fff hsla(25, 70%, 60%, 1);
+  color: hsla(25, 70%, 60%, 1);
+  background: #fff;
+}
+
+.notice, .pds{
+  display: none;
+}
+
+.tab-content-act{
+  display: block !important;
+}
+
+.board-list li::before{
+  margin: auto 5px auto 0;
+}
+
+.board-list li{
+  display: flex;
+}
+
+.board-list li a{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.board-list time{
+  margin-left: auto;
+}
+
+.icon-plus::before{
+  color: green;
+}
+
+.more{
+  position: absolute;
+  top: 0;
+  right: -10px;
+  padding: 10px;
+}

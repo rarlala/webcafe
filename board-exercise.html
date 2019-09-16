@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>공지사항 및 자료실 복습 (WAI-ARIA 사용)</title>
+  <link rel="stylesheet" href="/css/border-exercise.css">
+</head>
+
+<body>
+  <div class="board">
+    <ul class="tab-list">
+      <li role="presentation"><a href="#" role="tab" aria-selected="true" aria-controls="section1">공지사항</a></li>
+      <li role="presentation"><a href="#" role="tab" aria-selected="false" aria-controls="section2">자료실</a></li>
+    </ul>
+    <div class="tab-content">
+      <section class="notice tab-content-act" aria-labelledby="tab1" id="section1">
+        <ul class="board-list">
+          <li class="icon-dot-circled">
+            <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
+            <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+          </li>
+          <li class="icon-dot-circled">
+            <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+            <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+          </li>
+          <li class="icon-dot-circled">
+            <a href="#">KWCAG 2.1 소식</a>
+            <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+          </li>
+          <li class="icon-dot-circled">
+            <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+            <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+          </li>
+          <li class="icon-dot-circled">
+            <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+            <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+          </li>
+        </ul>
+        <a href="#" class="icon-plus notice-more more" title="공지사항">더보기</a>
+      </section>
+      <section class="pds" aria-labelledby="tab2" id="section2">
+        <ul class="board-list">
+          <li class="icon-dot-circled">
+            <a href="#">디자인 사이트 링크 모음</a>
+            <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+          </li>
+          <li class="icon-dot-circled">
+            <a href="#">웹 접근성 관련 자료 모음</a>
+            <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+          </li>
+          <li class="icon-dot-circled">
+            <a href="#">예제 샘플 응용해보기</a>
+            <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+          </li>
+          <li class="icon-dot-circled">
+            <a href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
+            <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+          </li>
+          <li class="icon-dot-circled">
+            <a href="#">로얄티 프리 이미지 자료</a>
+            <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+          </li>
+        </ul>
+        <a href="#" class="icon-plus pds-more more" title="자료실">더보기</a>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
