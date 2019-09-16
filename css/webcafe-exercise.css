@@ -548,6 +548,87 @@ body{
   color:green;
 }
 
+/* 새소식 영역 */
+
+.news{
+  position: relative;
+}
+
+.news-heading{
+  margin: 0;
+  /* background: yellow; */
+  font-size: 1.5rem;
+  color: #f7852e;
+}
+
+.news-heading::after{
+  content:"";
+  display: block;
+  background: linear-gradient(to right, #ccc, #fff);
+  margin: 20px 0 20px 0;
+  width: 80%;
+  height: 1px;
+}
+/* 학습한 방법은 position을 사용하여 배치 */
+
+.news-article-subject{
+  margin: 0;
+  /* background: blueviolet; */
+  font-size: 1.4rem;
+  width: 240px;
+  float: right;
+}
+
+.news-article-date{
+  width: 240px;
+  float: right;
+  /* background: pink; */
+}
+
+.news-article-brief{
+  margin: 10px 0 0 0;
+  /* background: blue; */
+  float: right;
+  width: 240px;
+  line-height: 1.5;
+}
+
+.news-article-thumbnail{
+  margin: 0;
+  /* background: orange; */
+  min-height: 150px;
+  text-align: center;
+}
+
+.news-article-thumbnail img{
+  box-shadow: 0 15px 15px 0 #aaa;
+}
+
+.news-article-thumbnail figcaption{
+  margin-top: 15px;
+}
+
+.news-more{
+  position: absolute;
+  /* background: red; */
+  top: 0;
+  right: -5px;
+  padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .main-content .group3{
   background-color: springgreen;
   width: 190px;

@@ -664,6 +664,7 @@ input[type="search"]{
 
 .news-link{
   display: block;
+  /* 해당을 적용한 이유는 a가 inline 요소다 보니 전체 영역에 색상을 적용해도 표시가 되지 않았기 때문 */
   /* background: pink; */
 }
 
