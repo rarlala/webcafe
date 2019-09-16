@@ -3,6 +3,8 @@
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 @import url('./fontello.css');
 
+/* 해당 html과 css 처리하면 공지사항 내 탭을 모두 거치고 자료실 탭으로 가는게 아닌 공지사항 탭 이후에 바로 자료실 탭으로 이동해 탭이 많은 경우 유용함 */
+
 /* 초기화 */
 *, *::before, *::after{
   box-sizing: border-box;
