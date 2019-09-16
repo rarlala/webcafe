@@ -640,9 +640,157 @@ input[type="search"]{
   /* float: right; */
 }
 
-/* 새소식 영역 */
+/* 새소식 강사님 학습 */
 
 .news{
+  /* background: yellow; */
+  margin-top: 20px;
+  position: relative;
+}
+
+.news::before{
+  content: "";
+  background: linear-gradient(to right, #aaa, #fff);
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+}
+
+.news-heading{
+  color: #f7852e;
+}
+
+.news-link{
+  display: block;
+  /* background: pink; */
+}
+
+.news-article{
+  /* background: purple; */
+  padding-left: 130px;
+  position: relative;
+  min-height: 105px;
+}
+
+.news-article-subject{
+  margin: 30px 0 0 0;
+  /* background: lime; */
+  font-size: 1.4rem;
+  font-weight: 450;
+}
+
+.news-article-date{
+  /* background: orangered; */
+  display: block;
+  margin: 5px 0 10px;
+}
+
+.news-article-brief{
+  /* background: gray; */
+  margin:0;
+  line-height: 1.5;
+}
+
+.news-article-thumbnail{
+  /* background: aqua; */
+  margin: 0;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+.news-article-thumbnail img{
+  box-shadow: 0 15px 15px 0 #aaa;
+}
+
+.news-article-thumbnail figcaption{
+  /* background: yellow; */
+  text-align: center;
+  margin-top: 15px;
+}
+
+.news-more{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 수업 시간에 시간을 주셔서 내가 작성한 코드
+
+.news{
+  background: yellow;
+  margin-top: 20px;
+  position: relative;
+}
+
+.news-heading{
+  margin: 0;
+  font-size: 1.5rem;
+  color: #f7852e;
+  background: red;
+}
+
+.news-heading::after{
+  content: "";
+  display: inline-block;
+  border-width: 2px;
+  border-bottom: 2px  ;
+  border-style: solid;
+  border-image: linear-gradient(pink, red);
+  border-image-width: 30px;
+  padding-top: 10px;  
+  background: pink;
+}
+
+.news-article-subject{
+  margin-bottom: 5px;;
+  font-size: 1.3rem;
+  background: red;
+  float: right;
+  width: 250px;
+}
+
+.news-article-date{
+  background: blue;
+  float: right;
+  width: 250px;
+}
+
+.news-article-brief{
+  float: right;
+  width: 250px;
+  margin: 10px 0 0 0;
+  background: pink;
+  line-height: 1.5em;
+}
+
+.news-article-thumbnail{
+  float: left;
+  position: absolute;
+  top: 53px;
+  margin: 0;
+}
+
+.news-article-thumbnail img{
+  box-shadow: 1px 10px 10px 3px #aaa;
+  margin-bottom: 15px;
+}
+
+.news-article-thumbnail figcaption{
+  text-align: center;
+}
+
+.news-more{
+  position: absolute;
+  top: 0;
+  right: 0;
+} */
+
+/* 새소식 영역 내가 예습한 코드 */
+
+/* .news{
   position: relative;
 }
 
@@ -652,7 +800,7 @@ input[type="search"]{
   color:#f7852e;
   margin-bottom: 20px;
   width: 300px;
-  /* background: purple; */
+  background: purple;
 }
 
 .news-heading::after{
@@ -667,11 +815,11 @@ input[type="search"]{
   width: 250px;
   font-size:1.4rem;
   float: right;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 
 .news-title-date{
-  /* background-color: blue; */
+  background-color: blue;
   width: 250px;
   float:right;
 }
@@ -679,7 +827,7 @@ input[type="search"]{
 .news-img{
   margin: -20px 0 0 0 ;
   width: 115px;
-  /* background-color: orange; */
+  background-color: orange;
   float: left;
 }
 
@@ -691,7 +839,7 @@ input[type="search"]{
 }
 
 .news .news-img .news-img-desc{
-  /* background-color: pink; */
+  background-color: pink;
   display: block;
   text-align: center;
   margin-top:20px;
@@ -708,7 +856,12 @@ input[type="search"]{
   position: absolute;
   top: 0;
   right: 0;
-  /* background-color: red; */
+  background-color: red;
+} */
+
+/* 신규 이벤트 및 관련 사이트 */
+.gradient-box{
+  background: yellow;
 }
 
 .slogan{
