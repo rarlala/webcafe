@@ -39,6 +39,14 @@ a{
   white-space: nowrap;
 }
 
+/* clearfix - float 이슈를 해결하기 위한 선언 */
+.clearfix::after{
+  content:"";
+  display: block;
+  clear: both;
+}
+
+
 html{
   font-size: 10px;
 }
@@ -863,7 +871,7 @@ input[type="search"]{
 
 /* 신규 이벤트 및 관련 사이트 */
 
-.gradient-box{
+.gradient-box, .favorite{
   background: #ccc linear-gradient(#ccc, #eee);
   border: 1px solid #aaa;
   border-radius: 5px;
@@ -875,19 +883,20 @@ input[type="search"]{
   position: relative;
 }
 
-.related{
+.related-title{
   border-top: 1px solid #aaa;
-}
-
-.event-heading, .related-title{
-  margin:10px 0;
-  font-size: 1.5rem;
 }
 
 .event p{
   margin: 10px 0;
   line-height: 1.5;
 }
+
+.event-heading, .related-title, .favorite-heading{
+  margin:10px 0;
+  font-size: 1.5rem;
+}
+
 
 .point-color{
   color: #f7852e;
@@ -964,7 +973,7 @@ input[type="search"]{
 
 .related-list a{
   width: calc(100% - 4px);
-  padding: 2px 0 0 1em;
+  padding: 2px 0 2px 1em;
   /* a요소를 중간정렬하기  */
   /*1번 방법 flex 사용 
   display: flex;
@@ -985,13 +994,168 @@ input[type="search"]{
   transform: translateY(-50%);
 }
 
+/* 인기사이트 영역*/
 
+.favorite{
+  margin-top: 20px;
+  padding: 0 10px;
+  position: relative;
+}
 
+/* position 으로 활용하는 방법*/
 
+.favorite-list{
+  padding-left: 0;
+  list-style: none;
+  counter-reset: 0;
+}
 
+.favorite-list li{
+  counter-increment: number;
+  margin: 8px 0;
+  position: relative;
+}
 
+.favorite-list li::before{
+  content: counter(number);
+  /* content: attr(class); */
+  color:#fff;
+  font-size: 1.2rem;
+  background: #999;
+  border-radius: 3px;
+  padding: 2px 5px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
 
+.favorite-list a{
+  vertical-align: middle;
+  display: inline-block;
+}
 
+.favorite-list em{
+  background: url('./images/rank.png') no-repeat;
+  font-style: normal;
+  width: 9px;
+  height: 11px;
+  text-indent: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+}
+
+em.stop{
+  background-position: 0 50%;
+}
+
+em.down{
+  background-position: 0 100%;
+}
+
+.favorite-more{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.favorite-more::before{
+  color:hsla(110, 70% , 20% , 1);
+}
+
+/* float를 활용하는 방법  html li요소에 clearfix 추가*/
+
+/* .favorite-list{
+  padding-left: 0;
+  list-style: none;
+  counter-reset: 0;
+}
+
+.favorite-list li{
+  background: yellow;
+  counter-increment: number;
+  margin: 8px 0;
+}
+
+.favorite-list li::before{
+  content: counter(number);
+  content: attr(class);
+  color:#fff;
+  font-size: 1.2rem;
+  background: #999;
+  border-radius: 3px;
+  padding: 1px 5px 2px 5px;
+  margin-right: 5px;
+  float: left;
+}
+
+.favorite-list a{
+  background: skyblue;
+  float: left;
+}
+
+.favorite-list em{
+  background: lightgreen url('./images/rank.png') no-repeat;
+  font-style: normal;
+  width: 9px;
+  height: 11px;
+  text-indent: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  float: right;
+  margin-top: 3px;
+}
+
+em.stop{
+  background-position: 0 50%;
+}
+
+em.down{
+  background-position: 0 100%;
+} */
+
+/* flex를 사용하는 방법 */
+
+/* .favorite-list li{
+  background: yellow;
+  counter-increment: number;
+  margin: 8px 0;
+  display: flex;
+  align-items:center;
+}
+
+.favorite-list li::before{
+  content: counter(number);
+  content: attr(class);
+  color:#fff;
+  font-size: 1.2rem;
+  background: #999;
+  border-radius: 3px;
+  padding: 0 5px;
+  margin-right: 5px;
+}
+
+.favorite-list em{
+  background: lightgreen url('./images/rank.png') no-repeat;
+  margin-left: auto;
+  font-style: normal;
+  width: 9px;
+  height: 11px;
+  text-indent: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+em.stop{
+  background-position: 0 50%;
+}
+
+em.down{
+  background-position: 0 100%;
+} */
 
 .slogan{
   background-color: orange;
