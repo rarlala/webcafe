@@ -352,6 +352,7 @@ body{
   /* background-color: pink; */
   width: 4em;  /* 4글자만큼 */
   display: inline-block;
+  cursor: pointer;
 }
 
 /* .login-form [type="email"], .login-form [type="password"] */
@@ -861,9 +862,136 @@ input[type="search"]{
 } */
 
 /* 신규 이벤트 및 관련 사이트 */
+
 .gradient-box{
-  background: yellow;
+  background: #ccc linear-gradient(#ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }
+
+.event, .related{
+  /* background: yellow; */
+  margin:0 10px;
+  position: relative;
+}
+
+.related{
+  border-top: 1px solid #aaa;
+}
+
+.event-heading, .related-title{
+  margin:10px 0;
+  font-size: 1.5rem;
+}
+
+.event p{
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.point-color{
+  color: #f7852e;
+  margin-left: 5px;
+}
+
+.event img{
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #aaa;
+}
+
+.event em {
+  font-style: normal;
+}
+
+.btn-event{
+  background: pink;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn-event button{
+  width: 18px;
+  height: 18px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.btn-event button::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  background-image: url(./images/back_forward.png);
+  background-repeat: no-repeat;
+}
+
+.btn-event-next::after{
+  background-position: 100% 0 !important;
+}
+
+.related-list{
+  background: #fff;
+  padding-left: 0;
+  list-style: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  height: 27px;
+  overflow: hidden;
+  /* line-height: 1.6; */
+  transition: height 1s 0s, background 1s 2s, padding 1s 1s;
+}
+
+.related-list:hover, .related-list:focus{
+  height: 147px;
+  background: yellow;
+  padding: 10px 0;
+}
+
+.related-list li{
+  height: 25px;
+  padding: 2px;
+  /* 3번,4번 방법*/
+  position: relative;
+}
+
+.related-list a{
+  width: calc(100% - 4px);
+  padding: 2px 0 0 1em;
+  /* a요소를 중간정렬하기  */
+  /*1번 방법 flex 사용 
+  display: flex;
+  align-items: center;
+  height: 100%;*/
+  /* 2번 방법 line-height 
+  display: block;
+  line-height: 21px;*/
+  /* 3번 방법 기준점을 사방으로 잡아 상자의 크기만큼을 잡음
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;*/
+  position: absolute;
+  left:2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
 
 .slogan{
   background-color: orange;
