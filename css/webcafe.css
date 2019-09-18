@@ -1,14 +1,16 @@
 @charset "utf-g";
-@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
-@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
-@import url('./fontello.css');
+@import url("https://necolas.github.io/normalize.css/latest/normalize.css");
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("./fontello.css");
 
 /* 초기화 */
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -27,7 +29,8 @@ a{
 
 /* 숨김 콘텐츠 */
 
-.a11y-hidden, legend{
+.a11y-hidden,
+legend {
   /* background-color: red; */
   position: absolute;
   /* top: -9999em; 스크롤되는 문제가 발생함*/
@@ -35,37 +38,40 @@ a{
   height: 1px;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
 
 /* clearfix - float 이슈를 해결하기 위한 선언 */
-.clearfix::after{
-  content:"";
+.clearfix::after {
+  content: "";
   display: block;
   clear: both;
 }
 
-
-html{
+html {
   font-size: 10px;
 }
 
-body{
+body {
   font-size: 1.4rem;
-  margin:0;
+  margin: 0;
   color: #181818;
-  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-family: "Spoqa Han Sans", "Sans-serif";
   font-weight: 400;
   background: gray;
 }
 
-.header, .visual, .main-content, .slogan, .footer{
+.header,
+.visual,
+.main-content,
+.slogan,
+.footer {
   margin: 0 auto;
-  width:940px;
+  width: 940px;
 }
 
-.header{
+.header {
   /* box-sizing: content-box; */
   box-sizing: border-box;
   background-color: pink;
@@ -74,8 +80,8 @@ body{
 }
 
 /* LOGO */
-.logo{
-  margin : 0;
+.logo {
+  margin: 0;
   position: absolute;
   top: 45px;
   left: 70px;
@@ -83,7 +89,7 @@ body{
 }
 
 /* 멤버 링크 */
-.member{
+.member {
   list-style-type: none;
   padding: 2px 0;
   margin: 0;
@@ -100,10 +106,10 @@ body{
   align-items: center; */
 }
 
-.member li{
+.member li {
   display: inline-block;
   font-size: 1.4rem;
-  text-transform :uppercase;
+  text-transform: uppercase;
 }
 
 /* .member li::before{
@@ -112,7 +118,7 @@ body{
   content: "\f142";
 } */
 
-.member li:nth-child(n+2)::before{
+.member li:nth-child(n + 2)::before {
   background-color: orange;
   font-family: "fontello";
   content: "\f142";
@@ -123,17 +129,23 @@ body{
   text-align: center; */
 }
 
-.member a{
-  padding:8px 10px;
+.member a {
+  padding: 8px 10px;
   display: inline-block;
 }
 
 /* 메인메뉴 */
-.menu{
+.menu {
   background-color: #f7852e; /*배경 이미지가 해석되지 않는 환경에서 보여줄 색상 지정, 이런 것이 fallback 예외상황 처리*/
-  background-image: linear-gradient(to bottom, #ffc132 0%,#f7852e 35%,#f7852e 70%,#ffc132 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-image: linear-gradient(
+    to bottom,
+    #ffc132 0%,
+    #f7852e 35%,
+    #f7852e 70%,
+    #ffc132 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   padding-left: 225px;
-  list-style:none;
+  list-style: none;
   margin: 5px 0 0 0;
   border-radius: 0 0 5px 5px;
   /* border-top: 2px solid #000; */
@@ -143,10 +155,10 @@ body{
   /* overflow: auto; */
 }
 
-.menu::after{
+.menu::after {
   content: "";
   background-color: lime;
-  clear:both;
+  clear: both;
   /* 여기까지만 쓰면 display의 속성이 inline이라 적용이 안됨 */
   display: block;
 }
@@ -155,41 +167,41 @@ body{
   float: left;
 } */
 
-.menu-item{
-  float:left;
+.menu-item {
+  float: left;
   position: relative;
   /* padding: 10px 0; .btm-menu가 padding top이 안먹어서 적용함*/
   /* line-height가 아닌 padding을 사용해 적용할 수도 있음 */
 }
 
-.btn-menu{
+.btn-menu {
   /* background-color: yellow; */
   display: block;
   height: 45px;
   line-height: 45px;
-  border-left: 2px solid rgba(255,255,255,0.5);
-  padding : 0 20px;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 0 20px;
   font-weight: 700;
   font-size: 1.6rem;
-  color:#fff;
+  color: #fff;
   text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
 }
 
-.menu-act .btn-menu{
-  color:#ff0 !important;
+.menu-act .btn-menu {
+  color: #ff0 !important;
   /* border-bottom: 2px solid #000; */
 }
 
-.menu-act .btn-menu::after{
-  content:"";
+.menu-act .btn-menu::after {
+  content: "";
   /* background-color: blue; */
   display: block;
   border-top: 2px solid #000;
 }
 
-.sub-menu{
+.sub-menu {
   padding-left: 0;
-  list-style:none;
+  list-style: none;
   margin: 0;
   background-color: yellow;
   position: absolute;
@@ -198,44 +210,49 @@ body{
   white-space: nowrap;
 }
 
-.sub-menu li, .sub-menu a{
+.sub-menu li,
+.sub-menu a {
   display: inline-block;
 }
 
-.sub-menu a{
+.sub-menu a {
   /* 위에 display: inline-block을 추가한 이유는 inline일 때 padding이 적용되지 않기 때문 */
   padding: 10px 0;
   margin-right: 10px;
 }
 
-.menu-act .sub-menu{
+.menu-act .sub-menu {
   /* 하나의 서브메뉴만 볼 수 있도록 설정하기 위함 */
   display: block;
   top: 47px;
 }
 
-.sub-menu1,.sub-menu2,.sub-menu3{
-  left:0;
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
+  left: 0;
 }
 
-.sub-menu4, .sub-menu5,.sub-menu6{
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
   right: 0;
 }
 
 /* 비주얼 */
-@keyframes textAni{
-  0%{
+@keyframes textAni {
+  0% {
     font-size: 12px;
-    color:rgba(0,0,0,0);
+    color: rgba(0, 0, 0, 0);
     /* padding:0; */
     /* margin: 0; */
     /* top:0;
     left:0; */
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
-  100%{
+  100% {
     font-size: 24px;
-    color:rgba(0,0,0,1);
+    color: rgba(0, 0, 0, 1);
     /* padding: 75px 0 0 400px; */
     /* margin: 75px 0 0 400px; */
     /* top:75px;
@@ -244,23 +261,24 @@ body{
   }
 }
 
-@keyframes bgAni{
-  0%{
+@keyframes bgAni {
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.visual{
+.visual {
   background-color: lime;
   height: 120px;
   position: relative;
 }
 
-.visual::before, .visual::after{
-  content:"";
+.visual::before,
+.visual::after {
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -273,30 +291,31 @@ body{
   animation: bgAni 2000ms infinite alternate ease-in-out;
 }
 
-.visual::before{
+.visual::before {
   /* background-color: silver;
   background-image: url('./images/ani_flower_01.png'), url('./images/ani_flower_02.png');
   background-repeat: no-repeat, no-repeat; /* background-repeat: no-repeat; 과 동일 
   background-position: 0 -10px, 670px 0; */
-  background: url('./images/ani_flower_01.png') no-repeat 0 -10px, url('./images/ani_flower_02.png') no-repeat 670px 0;
+  background: url("./images/ani_flower_01.png") no-repeat 0 -10px,
+    url("./images/ani_flower_02.png") no-repeat 670px 0;
 }
 
-.visual::after{
+.visual::after {
   animation-delay: 1000ms;
-  background: url('./images/ani_flower_03.png') no-repeat 300px 0, url('./images/ani_flower_04.png') no-repeat 800px 15px;
+  background: url("./images/ani_flower_03.png") no-repeat 300px 0,
+    url("./images/ani_flower_04.png") no-repeat 800px 15px;
 }
 
-
-.visual-text{
+.visual-text {
   position: absolute;
   background-color: yellow;
   animation-name: textAni;
   animation-duration: 5s;
   animation-fill-mode: forwards;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.main-content{
+.main-content {
   min-height: 400px;
   padding: 30px;
   background-color: #fff;
@@ -305,42 +324,42 @@ body{
   justify-content: space-between;
 }
 
-.group1{
+.group1 {
   flex-basis: 250px;
   /* flex-grow: 2;
   flex-shrink: 1; */
   /* 위 세가지를 함축해서 flex: 50px 2 1; */
   /* background-color:orange; */
 }
-.group2{
+.group2 {
   flex-basis: 380px;
   /* flex-grow: 1; */
   /* background-color:green; */
 }
-.group3{
+.group3 {
   flex-basis: 190px;
   /* flex-grow: 2; */
 }
 
 /* 로그인 */
 
-.login{
+.login {
   background: #f7852e radial-gradient(circle at right top, #ffc132, #f7852e);
   border-radius: 5px;
   padding: 10px;
   box-shadow: 5px 5px 0 0 #666;
 }
 
-.login-heading{
-  margin:0;
+.login-heading {
+  margin: 0;
   /* padding-left: 10px; */
-  text-indent: 10px; 
+  text-indent: 10px;
   /* background-color: pink; */
   font-size: 1.5rem;
   color: #ff0;
 }
 
-.login-form{
+.login-form {
   background-color: #fff;
   border-radius: 5px 5px 0 0;
   margin-top: 10px;
@@ -348,35 +367,35 @@ body{
   /* 제목에 margin-bottom을 줘도 되지만, 아래 섹션이 많이 등장할 수 있기 때문에 통상적으로 해당과 같이 적용 */
 }
 
-.login fieldset{
+.login fieldset {
   border: 0;
   position: relative;
   /* background-color: yellow; */
-  padding:0 0 10px 0;
+  padding: 0 0 10px 0;
   border-bottom: 1px solid #aaa;
 }
 
-.login-form label{
+.login-form label {
   /* background-color: pink; */
-  width: 4em;  /* 4글자만큼 */
+  width: 4em; /* 4글자만큼 */
   display: inline-block;
   cursor: pointer;
 }
 
 /* .login-form [type="email"], .login-form [type="password"] */
-.login-form input{
+.login-form input {
   /* background-color: skyblue; */
-  width:90px;
+  width: 90px;
   height: 22px;
   border: 1px solid #aaa;
   padding: 1px 1px 1px 5px;
 }
 
-.user-pw{
+.user-pw {
   margin-top: 6px;
 }
 
-.btn-login{
+.btn-login {
   position: absolute;
   top: 0;
   right: 0;
@@ -391,11 +410,10 @@ body{
   font: inherit;
 }
 
-
-.sign{
+.sign {
   background-color: #fff;
   border-radius: 0 0 5px 5px;
-  margin:0;
+  margin: 0;
   padding-left: 0;
   list-style: none;
   padding: 10px 10px 10px 10px;
@@ -403,18 +421,18 @@ body{
   justify-content: space-between;
 }
 
-.sign li{
+.sign li {
   /* background-color: yellow; */
   font-size: 1.3rem;
 }
 
-.sign li::before{
+.sign li::before {
   color: #ed8625;
 }
 
 /* 목록 영역 */
 
-.validation-list{
+.validation-list {
   /* background-color: yellow; */
   list-style-type: none;
   padding-left: 0;
@@ -422,13 +440,14 @@ body{
   /* box shadow를 줬기 때문에 5px을 더 줘야한다.*/
 }
 
-.validation-list li{
+.validation-list li {
   margin: 10px 0;
 }
 
-.validation-list a{
+.validation-list a {
   /* background icon은 앞에 위치해야 하기 때문에 앞에 배치해서 불러야한다. */
-  background: url('./images/validation_icon.png') no-repeat 20px 50%, linear-gradient(#ccc, #eee); /* 기본값 repeat position 0 0 */
+  background: url("./images/validation_icon.png") no-repeat 20px 50%,
+    linear-gradient(#ccc, #eee); /* 기본값 repeat position 0 0 */
   /* 어느 영역을 눌러도 링크가 되도록 display 속성 변경 */
   display: block;
   border: 1px solid #aaa;
@@ -438,20 +457,20 @@ body{
 
 /* 웹 관련 영역 */
 
-.term{
-  background:#ccc linear-gradient(#ccc, #eee); 
+.term {
+  background: #ccc linear-gradient(#ccc, #eee);
   border: 1px solid #aaa;
   border-radius: 5px;
   padding: 10px 15px;
 }
 
-.term-heading{
+.term-heading {
   /* background: yellow; */
   margin: 0;
   font-size: 1.5rem;
 }
 
-.term-list{
+.term-list {
   /* background: yellow; */
   margin: 10px 0 0 0;
 }
@@ -468,65 +487,71 @@ body{
   display: block;
 } */
 
-.term-list-subject{
+.term-list-subject {
   margin: -2px 0 5px 0;
 }
 
-.term-list-subject,.term-list-brief{
+.term-list-subject,
+.term-list-brief {
   /* background-color: pink; */
   float: right;
   width: 145px;
 }
 
-.term-list-thumbnail{
+.term-list-thumbnail {
   /* background-color: lime; */
   float: left;
 }
 
-.term-list-thumbnail img{
+.term-list-thumbnail img {
   vertical-align: top;
   /* inline이 배치되는 라인을 결정해주는 것 */
 }
 
-.term-list-brief{
+.term-list-brief {
   /* background-color: orange; */
   line-height: 1.5;
 }
 
-.term-list-thumbnail, .term-list-brief{
+.term-list-thumbnail,
+.term-list-brief {
   margin: 0;
 }
 
-.odd, .even{
+.odd,
+.even {
   margin-top: 15px;
 }
 
-.odd::after, .even::after{
+.odd::after,
+.even::after {
   content: "";
-  clear:both;
+  clear: both;
   display: block;
 }
 
-.odd .term-list-subject, .odd .term-list-brief{
+.odd .term-list-subject,
+.odd .term-list-brief {
   float: left;
 }
 
-.odd .term-list-thumbnail{
+.odd .term-list-thumbnail {
   float: right;
 }
 
-.even .term-list-subject, .even .term-list-brief{
+.even .term-list-subject,
+.even .term-list-brief {
   float: right;
 }
 
-.even .term-list-thumbnail{
+.even .term-list-thumbnail {
   float: left;
 }
 
 /* group2*/
 /* 검색영역 */
 
-.search{
+.search {
   background: #ccc linear-gradient(#ccc, #eee);
   border-radius: 15px 15px 0 0;
   padding: 15px 25px 10px;
@@ -534,13 +559,13 @@ body{
   border-bottom: 0;
 }
 
-.search-form fieldset{
+.search-form fieldset {
   padding: 0;
   margin: 0;
   border: none;
 }
 
-input[type="search"]{
+input[type="search"] {
   border: 1px solid #aaa;
   padding: 1px 1px 1px 5px;
   width: 200px;
@@ -549,46 +574,49 @@ input[type="search"]{
   margin: 0 2px;
 }
 
-.btn-search{
+.btn-search {
   background: #121212;
   color: #fff;
   /* font: inherit; */
   border: 1px solid #aaa;
   border-radius: 3px;
-  padding:0 10px;
+  padding: 0 10px;
   height: 24px;
   font-size: 1.3rem;
 }
 
 /* 공지사항과 자료실 영역 */
 
-.board{
+.board {
   /* background-color: yellow; */
   position: relative;
   /* margin-top: 20px; */
 }
 
-.board ul, .board .more{
+.board ul,
+.board .more {
   /* position: absolute; */
-  display:none;
+  display: none;
 }
 
-.tab-act ul, .tab-act .more{
+.tab-act ul,
+.tab-act .more {
   display: block !important;
 }
 
-.board .more{
+.board .more {
   /* background-color: skyblue; */
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.more::before{
-  color: hsla(110, 70% , 20% , 1);
+.more::before {
+  color: hsla(110, 70%, 20%, 1);
 }
 
-.notice-heading, .pds-heading{
+.notice-heading,
+.pds-heading {
   margin: 0;
   font-weight: 400;
   font-size: 1.4rem; /* 또는 1em */
@@ -597,45 +625,45 @@ input[type="search"]{
   top: 0;
 }
 
-.notice-heading{
+.notice-heading {
   left: 0;
 }
 
-.pds-heading{
+.pds-heading {
   left: 73px;
 }
 
-.tab{
+.tab {
   /* 비활성화된 tab 모양 */
   display: block;
   padding: 5px 10px;
   border: 1px solid #aaa;
-  border-radius: 5px 5px 0 0 ;
-  background:#ccc linear-gradient(#ccc, #eee);
+  border-radius: 5px 5px 0 0;
+  background: #ccc linear-gradient(#ccc, #eee);
   color: #666;
 }
 
-.tab-act .tab{
+.tab-act .tab {
   color: #ed8625;
   border-color: #ed8625 #ed8625 #fff #ed8625;
   background: #fff;
 }
 
-.board ul{
+.board ul {
   /* background-color: pink; */
   margin: 20px 0;
   padding: 45px 0 0 0;
   list-style: none;
 }
 
-.board li{
+.board li {
   /* background-color: lime; */
   margin: 8px 0;
   display: flex;
   /* justify-content: space-between; */
 }
 
-.board li a{
+.board li a {
   /* background-color: silver; */
   width: 270px;
   white-space: nowrap;
@@ -643,21 +671,21 @@ input[type="search"]{
   text-overflow: ellipsis;
 }
 
-.board time{
+.board time {
   /* background-color: orange; */
-  margin-left: auto; 
+  margin-left: auto;
   /* float: right; */
 }
 
 /* 새소식 강사님 학습 */
 
-.news{
+.news {
   /* background: yellow; */
   margin-top: 20px;
   position: relative;
 }
 
-.news::before{
+.news::before {
   content: "";
   background: linear-gradient(to right, #aaa, #fff);
   position: absolute;
@@ -667,43 +695,43 @@ input[type="search"]{
   height: 1px;
 }
 
-.news-heading{
+.news-heading {
   color: #f7852e;
 }
 
-.news-link{
+.news-link {
   display: block;
   /* 해당을 적용한 이유는 a가 inline 요소다 보니 전체 영역에 색상을 적용해도 표시가 되지 않았기 때문 */
   /* background: pink; */
 }
 
-.news-article{
+.news-article {
   /* background: purple; */
   padding-left: 130px;
   position: relative;
   min-height: 105px;
 }
 
-.news-article-subject{
+.news-article-subject {
   margin: 30px 0 0 0;
   /* background: lime; */
   font-size: 1.4rem;
   font-weight: 450;
 }
 
-.news-article-date{
+.news-article-date {
   /* background: orangered; */
   display: block;
   margin: 5px 0 10px;
 }
 
-.news-article-brief{
+.news-article-brief {
   /* background: gray; */
-  margin:0;
+  margin: 0;
   line-height: 1.5;
 }
 
-.news-article-thumbnail{
+.news-article-thumbnail {
   /* background: aqua; */
   margin: 0;
   position: absolute;
@@ -711,17 +739,17 @@ input[type="search"]{
   left: 0;
 }
 
-.news-article-thumbnail img{
+.news-article-thumbnail img {
   box-shadow: 0 15px 15px 0 #aaa;
 }
 
-.news-article-thumbnail figcaption{
+.news-article-thumbnail figcaption {
   /* background: yellow; */
   text-align: center;
   margin-top: 15px;
 }
 
-.news-more{
+.news-more {
   position: absolute;
   top: 0;
   right: 0;
@@ -871,39 +899,42 @@ input[type="search"]{
 
 /* 신규 이벤트 및 관련 사이트 */
 
-.gradient-box, .favorite{
+.gradient-box {
   background: #ccc linear-gradient(#ccc, #eee);
   border: 1px solid #aaa;
   border-radius: 5px;
 }
 
-.event, .related{
-  /* background: yellow; */
-  margin:0 10px;
+.point-color {
+  color: #f7852e;
+}
+
+.event,
+.related {
+  margin: 0 10px;
+}
+
+.event {
   position: relative;
 }
 
-.related-title{
+.related {
   border-top: 1px solid #aaa;
 }
 
-.event p{
+.event p {
   margin: 10px 0;
   line-height: 1.5;
 }
 
-.event-heading, .related-title, .favorite-heading{
-  margin:10px 0;
+.event-heading,
+.related-title,
+.favorite-heading {
+  margin: 10px 0;
   font-size: 1.5rem;
 }
 
-
-.point-color{
-  color: #f7852e;
-  margin-left: 5px;
-}
-
-.event img{
+.event img {
   border: 1px solid #aaa;
   box-shadow: 5px 5px 0 0 #aaa;
 }
@@ -912,14 +943,14 @@ input[type="search"]{
   font-style: normal;
 }
 
-.btn-event{
-  background: pink;
+.btn-event {
+  /* background: pink; */
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.btn-event button{
+.btn-event button {
   width: 18px;
   height: 18px;
   border: 0;
@@ -930,7 +961,7 @@ input[type="search"]{
   overflow: hidden;
 }
 
-.btn-event button::after{
+.btn-event button::after {
   content: "";
   position: absolute;
   top: 0;
@@ -942,11 +973,11 @@ input[type="search"]{
   background-repeat: no-repeat;
 }
 
-.btn-event-next::after{
+.btn-event-next::after {
   background-position: 100% 0 !important;
 }
 
-.related-list{
+.related-list {
   background: #fff;
   padding-left: 0;
   list-style: none;
@@ -958,20 +989,21 @@ input[type="search"]{
   transition: height 1s 0s, background 1s 2s, padding 1s 1s;
 }
 
-.related-list:hover, .related-list:focus{
+.related-list:hover,
+.related-list:focus {
   height: 147px;
   background: yellow;
   padding: 10px 0;
 }
 
-.related-list li{
+.related-list li {
   height: 25px;
   padding: 2px;
   /* 3번,4번 방법*/
   position: relative;
 }
 
-.related-list a{
+.related-list a {
   width: calc(100% - 4px);
   padding: 2px 0 2px 1em;
   /* a요소를 중간정렬하기  */
@@ -989,14 +1021,14 @@ input[type="search"]{
   right: 0;
   bottom: 0;*/
   position: absolute;
-  left:2px;
+  left: 2px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 /* 인기사이트 영역*/
 
-.favorite{
+.favorite {
   margin-top: 20px;
   padding: 0 10px;
   position: relative;
@@ -1004,22 +1036,22 @@ input[type="search"]{
 
 /* position 으로 활용하는 방법*/
 
-.favorite-list{
+.favorite-list {
   padding-left: 0;
   list-style: none;
   counter-reset: 0;
 }
 
-.favorite-list li{
+.favorite-list li {
   counter-increment: number;
   margin: 8px 0;
   position: relative;
 }
 
-.favorite-list li::before{
+.favorite-list li::before {
   content: counter(number);
   /* content: attr(class); */
-  color:#fff;
+  color: #fff;
   font-size: 1.2rem;
   background: #999;
   border-radius: 3px;
@@ -1029,13 +1061,13 @@ input[type="search"]{
   vertical-align: middle;
 }
 
-.favorite-list a{
+.favorite-list a {
   vertical-align: middle;
   display: inline-block;
 }
 
-.favorite-list em{
-  background: url('./images/rank.png') no-repeat;
+.favorite-list em {
+  background: url("./images/rank.png") no-repeat;
   font-style: normal;
   width: 9px;
   height: 11px;
@@ -1048,22 +1080,22 @@ input[type="search"]{
   margin-top: -5px;
 }
 
-em.stop{
+em.stop {
   background-position: 0 50%;
 }
 
-em.down{
+em.down {
   background-position: 0 100%;
 }
 
-.favorite-more{
+.favorite-more {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-.favorite-more::before{
-  color:hsla(110, 70% , 20% , 1);
+.favorite-more::before {
+  color: hsla(110, 70%, 20%, 1);
 }
 
 /* float를 활용하는 방법  html li요소에 clearfix 추가*/
@@ -1157,16 +1189,16 @@ em.down{
   background-position: 0 100%;
 } */
 
-.slogan{
+.slogan {
   background-color: orange;
   padding: 15px 0;
 }
 
-.footer-bg{
+.footer-bg {
   background-color: silver;
-  padding:15px 0;
+  padding: 15px 0;
 }
 
-.footer{
+.footer {
   background-color: yellow;
 }
