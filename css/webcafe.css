@@ -59,7 +59,9 @@ body {
   color: #181818;
   font-family: "Spoqa Han Sans", "Sans-serif";
   font-weight: 400;
-  background: gray;
+  background: url('./images/bg_flower.png') no-repeat 50% 0 fixed , #ccc linear-gradient(#ccc, #eee, #fff) no-repeat 0 0 fixed;
+  /* background-size: 940px 382px, 100% 100px; */
+  repeat: 
 }
 
 .header,
@@ -74,9 +76,10 @@ body {
 .header {
   /* box-sizing: content-box; */
   box-sizing: border-box;
-  background-color: pink;
+  background-color:#fff;
   position: relative;
   padding: 0 30px 50px 30px;
+  border-radius: 0 0 15px 15px; 
 }
 
 /* LOGO */
@@ -203,7 +206,7 @@ body {
   padding-left: 0;
   list-style: none;
   margin: 0;
-  background-color: yellow;
+  /* background-color: yellow; */
   position: absolute;
   display: none;
   /* width: 500px; 해당과 아래는 서브메뉴가 밑으로 가로 배치가 안되기 때문에 사용해 본 코드임*/
@@ -271,7 +274,7 @@ body {
 }
 
 .visual {
-  background-color: lime;
+  /* background-color: lime; */
   height: 120px;
   position: relative;
 }
@@ -308,7 +311,7 @@ body {
 
 .visual-text {
   position: absolute;
-  background-color: yellow;
+  /* background-color: yellow; */
   animation-name: textAni;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -322,6 +325,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-radius: 15px 15px 0 0;
 }
 
 .group1 {
@@ -1189,16 +1193,249 @@ em.down{
   background-position: 0 100%;
 } */
 
+/* 강사님 방법 */
+
+.slogan {
+  /* background-color: orange; */
+  /* justify-content: space-between; */
+  /* 1번 방법
+   padding: 0 100px 0 20px; */
+  padding: 0px 100px 15px 30px;
+  position: relative; 
+  display: flex;
+}
+
+.slogan-heading{
+  position: relative;
+  bottom: -30px;
+  flex: 0 1 auto;
+  min-width: 110px;
+  
+  /* 2번 방법
+  position: absolute;
+  bottom: -25px;
+  left: 30px; */
+  
+  /* 1번 방법
+  position: relative; */
+  
+  margin: 0;
+  /* width: 110px; */
+  height: 83px;
+  /* 글자 가운데 정렬 1번*/
+  /* line-height: 83px;
+  text-align: center;  */
+  /* background: lime; */
+  font-size: 1.4rem;
+  font-weight: 400;
+  /* 글자 가운데 정렬 2번 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 1번 방법
+  float: left; */
+  /* 커피잔 배치*/
+  /* 1번 방법
+  margin-bottom: -25px; */
+  margin-right: 25px;
+}
+
+.slogan-heading::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./images/coffee.png') no-repeat;
+}
+
+.slogan-content{
+  flex: 0 1 auto;
+
+  /* background: aqua; */
+  color: #a09784;
+  line-height: 1.5;
+  margin: 0;
+  
+  /* 
+  float: right;
+  width: 615px; */
+}
+
+.slogan-content q::before{
+  font-size: 3rem;
+  position: relative;
+  top: 10px;
+}
+
+.slogan-content q::after{
+  content:"";
+}
+
+
+
+/* 1. padding을 활용해 스스로 해본 방법 */
+
+/* 
+
 .slogan {
   background-color: orange;
   padding: 15px 0;
+  position: relative;
 }
 
+.slogan-heading, .slogan-content{
+  margin: 0;
+}
+.slogan-heading{
+  position: absolute;
+  bottom: -20px;
+  left: 30px;
+  font-size:1rem;
+  text-indent: -30px;
+  white-space: nowrap;
+  overflow:hidden;
+}
+
+.slogan-content q{
+  color: #666;
+}
+
+.slogan-content span{
+  color: #666;
+}
+
+.slogan-content q::before{
+  font-size: 2em;
+  color: gray;
+}
+
+.slogan-content q::after{
+  display: none;
+}
+
+.slogan-heading::after{
+  content: "";
+  display: block;
+  width: 110px;
+  height: 83px;
+  background: url('./images/coffee.png') no-repeat;
+}
+
+.slogan-content{
+  padding: 0 120px 0 150px;
+} */
+
+/* footer 영역 */
+
 .footer-bg {
-  background-color: silver;
   padding: 15px 0;
+  background: #ccc linear-gradient(#ccc, #eee, #fff) no-repeat 0 0 scroll;
 }
 
 .footer {
-  background-color: yellow;
+  position: relative;
+  padding: 0 100px 0 150px;
 }
+
+/* footer logo */
+
+.footer-logo{
+  position: absolute;
+  top: 20px;
+  left: 35px;
+}
+
+/* 가이드 링크 모음 */
+.guide-list{
+  background: #7b8385;;
+  color: #fff;
+  padding-left: 0;
+  margin:0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.guide-list a{
+  display: block;
+  padding: 8px 10px;
+  text-transform: uppercase;
+}
+
+/* 연락처 정보 */
+.address{
+  font-style: normal;
+  margin: 10px 0 5px 0; 
+}
+
+/* 기술 로고 */
+.badge{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+/* .footer-bg {
+  padding: 15px 0;
+  background: #ccc linear-gradient(#ccc, #eee, #fff) no-repeat 0 0 scroll;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer-logo{
+  position: absolute;
+  top: 20px;
+  left: 10px;
+
+}
+
+.guide-list, .address, .copyright{
+  margin: 0 120px;
+}
+
+.guide-list{
+  list-style: none;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-around;
+  background: gray;
+  border-radius: 5px;
+}
+
+.guide-list li{
+  padding: 7px 0;
+
+}
+
+.guide-list li a{
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.address{
+  margin-top:10px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.address span{
+  margin-right: 10px;
+}
+
+.copyright{
+  display: block;
+  margin-top:5px;
+  font-size: 1.3rem;
+}
+
+.badge{
+  position: absolute;
+  top:0;
+  right: 0;
+} */
