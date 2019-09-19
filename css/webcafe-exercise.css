@@ -643,6 +643,11 @@ body {
   padding: 5px;
 }
 
+.main-content .group3 {
+  background-color: springgreen;
+  width: 190px;
+}
+
 /* 신규 이벤트 및 관련사이트 영역*/
 
 .gradient-box {
@@ -773,10 +778,78 @@ body {
   transform: translateY(-50%);
 }
 
-.main-content .group3 {
-  background-color: springgreen;
-  width: 190px;
+.favorite{
+  background: #ccc linear-gradient(#ccc, #eee);
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 10px;
+  position: relative;
 }
+
+.favorite-heading{
+  margin: 0;
+}
+
+.favorite-list{
+  margin-top:10px;
+  counter-reset: 0;
+}
+
+.favorite-list li{
+  display: flex;
+  height: 25px;
+  counter-increment: number;
+  /* background: purple; */
+}
+
+.favorite-list li::before{
+  content: counter(number);
+  display:inline-block;
+  background: #181818;
+  border-radius: 3px;
+  width:15px;
+  height: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.favorite-list li a{
+  margin-left: 5px;
+  /* background: pink; */
+}
+
+.favorite-list li em{
+  margin-left: auto;
+  background: url('./images/rank.png') no-repeat;
+  width: 9px;
+  height: 11px;
+  padding-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.favorite-list li em[class="stop"]{
+  background-position: 0 50%;
+}
+
+.favorite-list li em[class="down"]{
+  background-position: 0 100%;
+}
+
+.favorite-more{
+  /* background: pink; */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.favorite-more::before{
+  color: green;
+}
+
+
+
 
 .slogan {
   background-color: green;
