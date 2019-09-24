@@ -61,7 +61,6 @@ body {
   font-weight: 400;
   background: url('./images/bg_flower.png') no-repeat 50% 0 fixed , #ccc linear-gradient(#ccc, #eee, #fff) no-repeat 0 0 fixed;
   /* background-size: 940px 382px, 100% 100px; */
-  repeat: 
 }
 
 .header,
@@ -475,7 +474,7 @@ body {
 }
 
 .term-list {
-  /* background: yellow; */
+  background: yellow;
   margin: 10px 0 0 0;
 }
 
@@ -497,13 +496,13 @@ body {
 
 .term-list-subject,
 .term-list-brief {
-  /* background-color: pink; */
+  background-color: pink;
   float: right;
   width: 145px;
 }
 
 .term-list-thumbnail {
-  /* background-color: lime; */
+  background-color: lime;
   float: left;
 }
 
@@ -1376,6 +1375,35 @@ em.down{
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.list{
+  overflow: hidden;
+}
+
+.list-box{
+  padding: 0;
+  margin: 0;
+}
+
+.list-subject{
+  background: yellow;
+}
+
+.list-brief{
+  background: orange;
+  margin: 0;
+}
+
+.list-subject{
+  width: 145px;
+  float: right;
+}
+
+.list-thumbnail{
+  background: green;
+  float: left;
+  /* margin: 0; */
 }
 
 

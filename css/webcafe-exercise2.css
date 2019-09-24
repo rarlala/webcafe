@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import url("https://necolas.github.io/normalize.css/latest/normalize.css");
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url("./fontello.css");
 
 /* 초기화 */
@@ -15,19 +17,19 @@ html {
 body {
   margin: 0;
   font-size: 1.4rem;
+  font-family: "Spoqa Han Sans", "Sans-serif";
   font-weight: 400;
   color: #181818;
   background-color: green;
 }
 
-header,
+.header,
 .visual,
 .main-content,
 .slogan,
 .footer {
   width: 940px;
   margin: 0 auto;
-  background-color: pink;
 }
 
 a {
@@ -36,10 +38,12 @@ a {
 }
 
 /* header 영역 */
-
 .header {
-  padding: 0 30px 50px 30px;
+  padding: 1px 30px 50px 30px;
+  box-sizing: border-box;
   position: relative;
+  background: #fff;
+  border-radius: 0 0 15px 15px;
 }
 
 .logo {
@@ -55,11 +59,9 @@ a {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.member {
   position: absolute;
-  right: -10px;
+  right: 30px;
+  top: 5px;
 }
 
 .member li {
@@ -68,16 +70,75 @@ a {
 
 .member li a {
   display: inline-block;
-  padding: 10px;
-  /* background-color: yellow; */
+  padding: 5px;
+  font-size: 1.4rem;
   text-transform: uppercase;
 }
 
 .member li:nth-child(n + 2)::before {
   font-family: "fontello";
   content: "\f142";
+  margin-right: 5px;
 }
 
-.menu {
+.navigation{
+  background: linear-gradient(to bottom, #ffc132 0%, #f7852e 35%,  #f7852e 70%,  #ffc132 100%);
+  padding-left: 230px;
+  box-shadow: -0 -2px #181818;
+  border-radius: 0 0 10px 10px;
+}
+
+.menu{
+  height: 45px;
+  margin-top: 40px;
+}
+
+.menu-item{
+  display: inline-block;
+  border-left: 1px solid #aaa;
+  position: relative;
+}
+
+.btn-menu{
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 45px;
+  padding: 10px 18px;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+}
+
+.btn-menu:hover{
+  color: yellow;
+}
+
+.menu, .sub-menu{
+  list-style: none;
+  padding-left: 0;
+}
+
+.sub-menu{
+  display: inline-block;
+  position: absolute;
+  top: 55px;
+  white-space: nowrap;
+  font-size: 1.4rem;
+}
+
+.sub-menu li{
+  display: inline-block;
+}
+
+.sub-menu1, .sub-menu2, .sub-menu3{
   display: none;
+  left: 0;
+}
+
+.sub-menu4, .sub-menu5, .sub-menu6{
+  display: none;
+  right: 0;
+}
+
+.sub-menu1{
+  display: block;
 }
