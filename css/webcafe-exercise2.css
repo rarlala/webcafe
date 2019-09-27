@@ -24,6 +24,16 @@ body {
   height: 100%;
 }
 
+.a11y-hidden, legend{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
 .header,
 .visual,
 .main-content,
@@ -211,4 +221,199 @@ a {
     opacity: 1;
     transform: translate(400px ,75px);
   }
+}
+
+/* 메인 콘텐츠 영역 */
+.main-content{
+  padding: 30px;
+  background: skyblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.group1{
+  width: 250px;
+  /* background: chartreuse; */
+}
+
+.group2{
+  width: 385px;
+  background: antiquewhite;
+}
+
+.group3{
+  width: 190px;
+  background: darkcyan;
+}
+
+/* 그룹 1 */
+
+/* 로그인 영역 */
+
+.login{
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(#f7852e, #ffc132);
+  box-shadow: 3px 3px #aaa;
+}
+
+.login-heading{
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 0 0 10px 15px;
+  color: yellow;
+}
+
+.login form{
+  padding: 10px 10px 0 10px;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+
+.login fieldset{
+  border: none;
+  margin:0;
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 10px 0;
+}
+
+.login fieldset legend{
+  display: none;
+}
+
+.login fieldset input:nth-child(n-1){
+  width: 95px;
+  height: 20px;
+  padding: 1px 1px 1px 2px;
+}
+
+.login fieldset div label{
+  display: inline-block;
+  width: 55px;
+  font-size: 1.4rem;
+}
+
+.user-email{
+  margin-bottom: 8px;
+}
+
+.login-btn{
+  padding: 0;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #f7852e;
+  border-radius: 3px;
+}
+
+/* .login-form::after{
+  content: "";
+  display: block;
+  width: 80%;
+  height: 1px;
+  margin:0 auto;
+  background: #ccc;
+} */
+
+.login-help{
+  list-style: none;
+  padding: 10px 10px 10px 10px;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  margin: 0;
+}
+
+.login-help li{
+  display: inline-block;
+  font-size: 13px;
+}
+
+.login-help li:first-child{
+  margin-right: 10px;
+}
+
+.login-help li::before{
+  margin:0;
+  color: #f7852e;
+}
+
+/* validation 영역 */
+
+.validation h2{
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.validation ul{
+  padding-left: 0;
+  margin: 23px 0 20px 0;
+  list-style: none;
+}
+
+.validation li:first-child{
+  margin-bottom: 10px;
+}
+
+.validation li{
+  /* height: 40px; */
+  border: 1px solid #aaa;
+  background: url('./images/validation_icon.png') no-repeat 15px 50%, linear-gradient(#ccc , #eee);
+  border-radius: 20px;
+}
+
+.validation li a{
+  display: block;
+  padding: 8px 0 8px 40px;
+}
+
+/* 웹 관련 용어 영역 */
+
+.terms{
+  background: #ccc linear-gradient(#ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.terms-heading{
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.term-list{
+  clear: both;
+  margin: 10px 0 0 0;
+}
+
+.term-list-subject{
+  float: right;
+  width: 145px;
+  color: blue;
+  margin-bottom: 10px;
+}
+
+.term-list-thumbnail{
+  margin-left: 0;
+  float: left;
+}
+
+.term-list-brief{
+  margin-left: 0;
+  float: right;
+  width: 145px;
+  line-height: 2rem;
+}
+
+.term-list::after{
+  content: "";
+  display: block;
+  clear: both;
 }
