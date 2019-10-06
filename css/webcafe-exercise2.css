@@ -24,13 +24,14 @@ body {
   height: 100%;
 }
 
-.a11y-hidden, legend{
+.a11y-hidden,
+legend {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
 
@@ -92,30 +93,36 @@ a {
   margin-right: 5px;
 }
 
-.navigation{
-  background: linear-gradient(to bottom, #ffc132 0%, #f7852e 35%,  #f7852e 70%,  #ffc132 100%);
+.navigation {
+  background: linear-gradient(
+    to bottom,
+    #ffc132 0%,
+    #f7852e 35%,
+    #f7852e 70%,
+    #ffc132 100%
+  );
   padding-left: 230px;
   box-shadow: -0 -2px #181818;
   border-radius: 0 0 10px 10px;
 }
 
-.menu{
+.menu {
   height: 45px;
   margin-top: 40px;
 }
 
-.menu-item{
+.menu-item {
   display: inline-block;
   border-left: 1px solid #aaa;
   position: relative;
   height: 45px;
 }
 
-.menu-act .btn-menu{
+.menu-act .btn-menu {
   color: yellow;
 }
 
-.menu-act::after{
+.menu-act::after {
   content: "";
   display: block;
   background: #000;
@@ -124,7 +131,7 @@ a {
   margin: 0 auto;
 }
 
-.btn-menu{
+.btn-menu {
   font-size: 1.6rem;
   color: #fff;
   font-weight: bold;
@@ -133,16 +140,17 @@ a {
   text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
 }
 
-.btn-menu:hover{
+.btn-menu:hover {
   color: yellow;
 }
 
-.menu, .sub-menu{
+.menu,
+.sub-menu {
   list-style: none;
   padding-left: 0;
 }
 
-.sub-menu{
+.sub-menu {
   display: inline-block;
   position: absolute;
   top: 55px;
@@ -150,99 +158,106 @@ a {
   font-size: 1.4rem;
 }
 
-.sub-menu li{
+.sub-menu li {
   display: inline-block;
 }
 
-.sub-menu1, .sub-menu2, .sub-menu3{
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
   display: none;
   left: 0;
 }
 
-.sub-menu4, .sub-menu5, .sub-menu6{
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
   display: none;
   right: 0;
 }
 
-.sub-menu1{
+.sub-menu1 {
   display: block;
 }
 
 /* 비주얼 영역 */
 
-.visual{
+.visual {
   height: 120px;
-  background: url('./images/bg_flower.png') no-repeat;
+  background: url("./images/bg_flower.png") no-repeat;
   background-position: 0 50%;
   position: relative;
 }
 
-.visual-text{
+.visual-text {
   font-size: 20px;
   position: absolute;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   animation: textani 2s ease-in forwards;
 }
 
-.visual::after, .visual::before{
+.visual::after,
+.visual::before {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-.visual::after{
-  background: url('./images/ani_flower_01.png') 0px -35px no-repeat ,  url('./images/ani_flower_02.png') 650px 0px no-repeat;
+.visual::after {
+  background: url("./images/ani_flower_01.png") 0px -35px no-repeat,
+    url("./images/ani_flower_02.png") 650px 0px no-repeat;
   animation: flowerani 2s ease-in-out infinite alternate-reverse;
 }
 
-.visual::before{
-  background: url('./images/ani_flower_03.png') 300px -10px no-repeat , url('./images/ani_flower_04.png') no-repeat 800px 0px;
+.visual::before {
+  background: url("./images/ani_flower_03.png") 300px -10px no-repeat,
+    url("./images/ani_flower_04.png") no-repeat 800px 0px;
   animation: flowerani 2s 1s ease-in-out infinite alternate-reverse;
 }
 
-@keyframes flowerani{
-  0%{
+@keyframes flowerani {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes textani{
-  0%{
+@keyframes textani {
+  0% {
     font-size: 10px;
     opacity: 0;
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
-  100%{
+  100% {
     font-size: 25px;
     opacity: 1;
-    transform: translate(400px ,75px);
+    transform: translate(400px, 75px);
   }
 }
 
 /* 메인 콘텐츠 영역 */
-.main-content{
+.main-content {
   padding: 30px;
-  background: skyblue;
+  background: #fff;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
 }
 
-
-.group1{
+.group1 {
   width: 250px;
   /* background: chartreuse; */
 }
 
-.group2{
+.group2 {
   width: 385px;
   background: antiquewhite;
 }
 
-.group3{
+.group3 {
   width: 190px;
   background: darkcyan;
 }
@@ -251,55 +266,55 @@ a {
 
 /* 로그인 영역 */
 
-.login{
+.login {
   padding: 10px;
   border-radius: 5px;
   background: linear-gradient(#f7852e, #ffc132);
   box-shadow: 3px 3px #aaa;
 }
 
-.login-heading{
+.login-heading {
   margin: 0;
   font-size: 1.5rem;
   padding: 0 0 10px 15px;
   color: yellow;
 }
 
-.login form{
+.login form {
   padding: 10px 10px 0 10px;
   background: #fff;
   border-radius: 5px 5px 0 0;
   position: relative;
 }
 
-.login fieldset{
+.login fieldset {
   border: none;
-  margin:0;
+  margin: 0;
   border-bottom: 1px solid #ccc;
   padding: 0 0 10px 0;
 }
 
-.login fieldset legend{
+.login fieldset legend {
   display: none;
 }
 
-.login fieldset input:nth-child(n-1){
+.login fieldset input:nth-child(n-1) {
   width: 95px;
   height: 20px;
   padding: 1px 1px 1px 2px;
 }
 
-.login fieldset div label{
+.login fieldset div label {
   display: inline-block;
   width: 55px;
   font-size: 1.4rem;
 }
 
-.user-email{
+.user-email {
   margin-bottom: 8px;
 }
 
-.login-btn{
+.login-btn {
   padding: 0;
   border: 0;
   width: 50px;
@@ -323,7 +338,7 @@ a {
   background: #ccc;
 } */
 
-.login-help{
+.login-help {
   list-style: none;
   padding: 10px 10px 10px 10px;
   background: #fff;
@@ -331,89 +346,205 @@ a {
   margin: 0;
 }
 
-.login-help li{
+.login-help li {
   display: inline-block;
   font-size: 13px;
 }
 
-.login-help li:first-child{
+.login-help li:first-child {
   margin-right: 10px;
 }
 
-.login-help li::before{
-  margin:0;
+.login-help li::before {
+  margin: 0;
   color: #f7852e;
 }
 
 /* validation 영역 */
 
-.validation h2{
+.validation h2 {
   font-weight: 400;
   font-size: 1.4rem;
 }
 
-.validation ul{
+.validation ul {
   padding-left: 0;
   margin: 23px 0 20px 0;
   list-style: none;
 }
 
-.validation li:first-child{
+.validation li:first-child {
   margin-bottom: 10px;
 }
 
-.validation li{
+.validation li {
   /* height: 40px; */
   border: 1px solid #aaa;
-  background: url('./images/validation_icon.png') no-repeat 15px 50%, linear-gradient(#ccc , #eee);
+  background: url("./images/validation_icon.png") no-repeat 15px 50%,
+    linear-gradient(#ccc, #eee);
   border-radius: 20px;
 }
 
-.validation li a{
+.validation li a {
   display: block;
   padding: 8px 0 8px 40px;
 }
 
 /* 웹 관련 용어 영역 */
 
-.terms{
+.terms {
   background: #ccc linear-gradient(#ccc, #eee);
   border: 1px solid #aaa;
   border-radius: 5px;
   padding: 10px 15px;
 }
 
-.terms-heading{
+.terms-heading {
   margin: 0;
   font-size: 1.5rem;
 }
 
-.term-list{
+.term-list {
   clear: both;
   margin: 10px 0 0 0;
 }
 
-.term-list-subject{
+.term-list-subject {
   float: right;
   width: 145px;
   color: blue;
   margin-bottom: 10px;
 }
 
-.term-list-thumbnail{
+.term-list-thumbnail {
   margin-left: 0;
   float: left;
 }
 
-.term-list-brief{
+.term-list-brief {
   margin-left: 0;
   float: right;
   width: 145px;
   line-height: 2rem;
 }
 
-.term-list::after{
+.term-list::after {
   content: "";
   display: block;
   clear: both;
+}
+
+/* group2 영역 */
+
+/* 검색바 영역 */
+
+.search {
+  background: linear-gradient(#ccc, #eee);
+  border-radius: 15px 15px 0 0;
+  border: 1px solid #aaa;
+  border-bottom: none;
+  padding: 15px 25px 10px;
+}
+
+.search fieldset {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.search input[type="search"] {
+  border: 1px solid #aaa;
+  width: 200px;
+  height: 24px;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+  margin: 0 2px;
+}
+
+.btn-search {
+  background: #000;
+  color: #fff;
+  font-size: 1.3rem;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 0 10px;
+}
+
+/* 공지사항 및 자료실 영역 */
+.board {
+  /* background: yellowgreen; */
+  margin: 20px 0;
+  position: relative;
+}
+
+.board ul,
+.board .more {
+  display: none;
+}
+
+.board h2 {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+  background: linear-gradient(#ccc, #eee);
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+  border-radius: 5px 5px 0 0;
+  color: #666;
+}
+
+.notice-list,
+.pds-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.board li {
+  line-height: 2rem;
+  display: flex;
+}
+
+.board li::before {
+  margin-top: 3px;
+}
+
+.board li a {
+  width: 270px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board time {
+  margin-left: auto;
+}
+
+.tab-act h2 {
+  border: 1px solid #f7852e;
+  background: #fff;
+  border-bottom: none;
+  color: #f7852e;
+}
+
+.tab-act ul,
+.tab-act .more {
+  display: block;
+}
+
+.more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.more::before {
+  color: hsla(110, 70%, 20%, 1);
+}
+
+.pds-heading {
+  position: absolute;
+  top: 0;
+  left: 75px;
 }
